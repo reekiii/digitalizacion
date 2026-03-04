@@ -1,0 +1,210 @@
+:root {
+  /* Grayscale Palette (Light Mode Default) */
+  --color-white: #ffffff;
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-black: #000000;
+
+  /* Theme specific backgrounds */
+  --bg-color: var(--color-zinc-50);
+  --glass-bg-base: rgba(255, 255, 255, 0.37);
+  --glass-border-light: rgba(255, 255, 255, 0.8);
+  --glass-border-dark: rgba(255, 255, 255, 0.3);
+  --glass-highlight: rgba(255, 255, 255, 0.7);
+  --glass-shadow-inner-1: rgba(255, 255, 255, 0.5);
+  --glass-shadow-inner-2: rgba(255, 255, 255, 0.1);
+  --glass-shadow-drop: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  /* Inverted Grayscale Palette */
+  --color-white: #18181b;
+  /* zinc-900 */
+  --color-zinc-50: #27272a;
+  /* zinc-800 */
+  --color-zinc-100: #3f3f46;
+  /* zinc-700 */
+  --color-zinc-200: #52525b;
+  /* zinc-600 */
+  --color-zinc-300: #71717a;
+  /* zinc-500 */
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #d4d4d8;
+  /* zinc-300 */
+  --color-zinc-600: #e4e4e7;
+  /* zinc-200 */
+  --color-zinc-700: #f4f4f5;
+  /* zinc-100 */
+  --color-zinc-800: #fafafa;
+  /* zinc-50 */
+  --color-zinc-900: #ffffff;
+  /* white */
+  --color-black: #ffffff;
+
+  /* Dark Theme specific backgrounds */
+  --bg-color: #09090b;
+  /* Even darker than zinc-900 for true dark mode */
+  --glass-bg-base: rgba(24, 24, 27, 0.6);
+  /* Translucent dark */
+  --glass-border-light: rgba(255, 255, 255, 0.15);
+  /* Subtler light reflection */
+  --glass-border-dark: rgba(255, 255, 255, 0.05);
+  --glass-highlight: rgba(255, 255, 255, 0.1);
+  --glass-shadow-inner-1: rgba(255, 255, 255, 0.1);
+  --glass-shadow-inner-2: rgba(0, 0, 0, 0.5);
+  /* Dark internal shadow */
+  --glass-shadow-drop: rgba(0, 0, 0, 0.5);
+  /* Stronger drop shadow in dark mode */
+}
+
+:root {
+
+  /* Typography */
+  --font-geist: 'Geist Sans', system-ui, -apple-system, sans-serif;
+
+  /* Soft Glass Tokens */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.5);
+  --glass-border-light: 1px solid rgba(255, 255, 255, 0.8);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  --glass-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.12);
+  --glass-blur: blur(24px);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-geist);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-zinc-700);
+  background-color: var(--bg-color);
+  background-image:
+    radial-gradient(circle at 15% 50%, var(--color-zinc-200) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, var(--color-zinc-300) 0%, transparent 50%),
+    radial-gradient(var(--color-zinc-200) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 24px 24px;
+  background-attachment: fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-zinc-900);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  transition: color 0.5s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-zinc-900);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.soft-glass {
+  background: var(--glass-bg-base);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border-dark);
+  box-shadow:
+    0 8px 32px var(--glass-shadow-drop),
+    inset 0 1px 0 var(--glass-shadow-inner-1),
+    inset 0 -1px 0 var(--glass-shadow-inner-2),
+    inset 0 0 14px 7px var(--glass-highlight);
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.soft-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+      transparent,
+      var(--glass-border-light),
+      transparent);
+  pointer-events: none;
+}
+
+.soft-glass::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg,
+      var(--glass-border-light),
+      transparent,
+      var(--glass-border-dark));
+  pointer-events: none;
+}
+
+/* Base Form Styles */
+input,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Mobile-first specific resets */
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
