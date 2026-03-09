@@ -64,6 +64,22 @@
   line-height: 1.55;
 }
 
+.cookie-link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-zinc-900);
+  font-size: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cookie-link-btn:hover {
+  color: var(--color-black);
+}
+
 .cookie-actions {
   display: flex;
   flex-direction: column;

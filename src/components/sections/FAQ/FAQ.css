@@ -1,57 +1,63 @@
 .faq-section {
-    padding: 8rem 0;
+  padding: 8rem 0;
+  background-color: var(--bg-color);
 }
 
 .faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02);
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: 0 4px 20px var(--glass-shadow-drop);
 }
 
 .faq-item {
-    border-bottom: 1px solid var(--color-zinc-200);
+  border-bottom: 1px solid var(--card-border);
 }
 
 .faq-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .faq-question {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: var(--color-zinc-900);
-    text-align: left;
-    transition: background-color 0.2s ease;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  text-align: left;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
 }
 
 .faq-question:hover {
-    background-color: var(--color-white);
+  background-color: var(--neutral-100);
+}
+
+.dark .faq-question:hover {
+  background-color: var(--neutral-800);
 }
 
 .faq-icon {
-    color: var(--color-zinc-500);
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
-    margin-left: 1rem;
+  color: var(--text-secondary);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
 }
 
 .faq-icon.open {
-    transform: rotate(180deg);
-}
-
-.faq-answer-container {
-    overflow: hidden;
+  transform: rotate(180deg);
 }
 
 .faq-answer {
-    padding: 0 2rem 1.5rem 2rem;
-    color: var(--color-zinc-600);
-    line-height: 1.6;
+  padding: 0 2rem 1.5rem 2rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }

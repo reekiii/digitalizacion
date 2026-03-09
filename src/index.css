@@ -1,20 +1,23 @@
 :root {
-  /* Grayscale Palette (Light Mode Default) */
-  --color-white: #ffffff;
-  --color-zinc-50: #fafafa;
-  --color-zinc-100: #f4f4f5;
-  --color-zinc-200: #e4e4e7;
-  --color-zinc-300: #d4d4d8;
-  --color-zinc-400: #a1a1aa;
-  --color-zinc-500: #71717a;
-  --color-zinc-600: #52525b;
-  --color-zinc-700: #3f3f46;
-  --color-zinc-800: #27272a;
-  --color-zinc-900: #18181b;
-  --color-black: #000000;
+  /* Grayscale Palette (Stable: higher number = darker) */
+  --neutral-50: #fafafa;
+  --neutral-100: #f4f4f5;
+  --neutral-200: #e4e4e7;
+  --neutral-300: #d4d4d8;
+  --neutral-400: #a1a1aa;
+  --neutral-500: #71717a;
+  --neutral-600: #52525b;
+  --neutral-700: #3f3f46;
+  --neutral-800: #27272a;
+  --neutral-900: #18181b;
 
-  /* Theme specific backgrounds */
-  --bg-color: var(--color-zinc-50);
+  /* Semantic Variables - Light Mode */
+  --bg-color: var(--neutral-50);
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-500);
+  --card-bg: #ffffff;
+  --card-border: var(--neutral-200);
+
   --glass-bg-base: rgba(255, 255, 255, 0.37);
   --glass-border-light: rgba(255, 255, 255, 0.8);
   --glass-border-dark: rgba(255, 255, 255, 0.3);
@@ -25,50 +28,25 @@
 }
 
 .dark {
-  /* Inverted Grayscale Palette */
-  --color-white: #18181b;
-  /* zinc-900 */
-  --color-zinc-50: #27272a;
-  /* zinc-800 */
-  --color-zinc-100: #3f3f46;
-  /* zinc-700 */
-  --color-zinc-200: #52525b;
-  /* zinc-600 */
-  --color-zinc-300: #71717a;
-  /* zinc-500 */
-  --color-zinc-400: #a1a1aa;
-  --color-zinc-500: #d4d4d8;
-  /* zinc-300 */
-  --color-zinc-600: #e4e4e7;
-  /* zinc-200 */
-  --color-zinc-700: #f4f4f5;
-  /* zinc-100 */
-  --color-zinc-800: #fafafa;
-  /* zinc-50 */
-  --color-zinc-900: #ffffff;
-  /* white */
-  --color-black: #ffffff;
-
-  /* Dark Theme specific backgrounds */
+  /* Semantic Variables - Dark Mode */
   --bg-color: #09090b;
-  /* Even darker than zinc-900 for true dark mode */
+  --text-primary: #ffffff;
+  --text-secondary: var(--neutral-400);
+  --card-bg: var(--neutral-900);
+  --card-border: var(--neutral-800);
+
   --glass-bg-base: rgba(24, 24, 27, 0.6);
-  /* Translucent dark */
   --glass-border-light: rgba(255, 255, 255, 0.15);
-  /* Subtler light reflection */
   --glass-border-dark: rgba(255, 255, 255, 0.05);
   --glass-highlight: rgba(255, 255, 255, 0.1);
   --glass-shadow-inner-1: rgba(255, 255, 255, 0.1);
   --glass-shadow-inner-2: rgba(0, 0, 0, 0.5);
-  /* Dark internal shadow */
-  --glass-shadow-drop: rgba(0, 0, 0, 0.5);
-  /* Stronger drop shadow in dark mode */
+  --glass-shadow-drop: rgba(0, 0, 0, 0.7);
 }
 
 :root {
-
   /* Typography */
-  --font-geist: 'Geist Sans', system-ui, -apple-system, sans-serif;
+  --font-geist: "Geist Sans", system-ui, -apple-system, sans-serif;
 
   /* Soft Glass Tokens */
   --glass-bg: rgba(255, 255, 255, 0.65);
@@ -98,18 +76,39 @@ body {
   font-family: var(--font-geist);
   font-size: 16px;
   line-height: 1.6;
-  color: var(--color-zinc-700);
+  color: var(--text-secondary);
   background-color: var(--bg-color);
   background-image:
-    radial-gradient(circle at 15% 50%, var(--color-zinc-200) 0%, transparent 50%),
-    radial-gradient(circle at 85% 30%, var(--color-zinc-300) 0%, transparent 50%),
-    radial-gradient(var(--color-zinc-200) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 24px 24px;
+    radial-gradient(circle at 15% 50%, var(--neutral-200) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, var(--neutral-300) 0%, transparent 50%),
+    radial-gradient(var(--neutral-300) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    100% 100%,
+    24px 24px;
   background-attachment: fixed;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.dark body {
+  color: var(--text-secondary);
+  background-image:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(39, 39, 42, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(63, 63, 70, 0.2) 0%,
+      transparent 50%
+    ),
+    radial-gradient(rgba(39, 39, 42, 0.5) 1px, transparent 1px);
 }
 
 h1,
@@ -118,7 +117,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-zinc-900);
+  color: var(--text-primary);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -132,7 +131,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-zinc-900);
+  color: var(--text-primary);
 }
 
 button {
@@ -163,34 +162,41 @@ button {
     inset 0 0 14px 7px var(--glass-highlight);
   position: relative;
   overflow: hidden;
-  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
 }
 
 .soft-glass::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg,
-      transparent,
-      var(--glass-border-light),
-      transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--glass-border-light),
+    transparent
+  );
   pointer-events: none;
 }
 
 .soft-glass::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 1px;
   height: 100%;
-  background: linear-gradient(180deg,
-      var(--glass-border-light),
-      transparent,
-      var(--glass-border-dark));
+  background: linear-gradient(
+    180deg,
+    var(--glass-border-light),
+    transparent,
+    var(--glass-border-dark)
+  );
   pointer-events: none;
 }
 

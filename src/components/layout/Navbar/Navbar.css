@@ -1,180 +1,168 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 1.5rem 0;
-    transition: padding 0.3s ease, background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1.5rem 0;
+  transition:
+    padding 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .navbar.scrolled {
-    padding: 1rem 0;
-    /* Overrides for the soft-glass class so the mobile menu isn't clipped */
-    border-radius: 0;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    overflow: visible !important;
+  padding: 1rem 0;
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  overflow: visible !important;
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: visible;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: visible;
 }
 
 .nav-logo {
-    font-weight: 600;
-    font-size: 1.25rem;
-    letter-spacing: -0.02em;
-    color: var(--color-zinc-900);
-    white-space: nowrap;
-    flex-shrink: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 .mobile-toggle-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    color: var(--color-zinc-900);
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 101;
-    min-width: 40px;
-    min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 101;
+  min-width: 40px;
+  min-height: 40px;
 }
 
 /* Bubble Glass Contact Button */
 .btn-contact {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1.25rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--color-zinc-900);
-    transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
 
-    /* Bubble Glass styles */
-    background: rgba(255, 255, 255, 0.37);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow:
-        0 4px 16px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5),
-        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-        inset 0 0 10px 4px rgba(255, 255, 255, 0.7);
-    position: relative;
-    overflow: hidden;
+  background: var(--glass-bg-base);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 999px;
+  border: 1px solid var(--glass-border-dark);
+  box-shadow:
+    0 4px 16px var(--glass-shadow-drop),
+    inset 0 1px 0 var(--glass-shadow-inner-1);
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-contact::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-    pointer-events: none;
-}
-
-.btn-contact::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), transparent, rgba(255, 255, 255, 0.3));
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--glass-highlight),
+    transparent
+  );
+  pointer-events: none;
 }
 
 .btn-contact:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--glass-shadow-hover);
-}
-
-.desktop-contact-btn {
-    display: none;
-    /* Hidden on mobile header */
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow-hover);
 }
 
 /* Mobile Dropdown Menu */
 @media (max-width: 767px) {
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-        z-index: 99;
-        /* Below the header but above the page */
-        gap: 2.5rem;
-    }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+    transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 99;
+    gap: 2.5rem;
+  }
 
-    /* True Dark mode support for the mobile menu */
-    .dark .nav-links {
-        background: rgba(9, 9, 11, 0.95);
-    }
+  .nav-links.open {
+    right: 0;
+  }
 
-    .nav-links.open {
-        right: 0;
-    }
+  .nav-links a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
 
-    .nav-links a {
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-
-    .mobile-nav-btn {
-        margin-top: 2rem;
-        font-size: 1.125rem !important;
-        padding: 0.75rem 2rem;
-    }
+  .mobile-nav-btn {
+    margin-top: 2rem;
+    font-size: 1.125rem !important;
+    padding: 0.75rem 2rem;
+  }
 }
 
 /* Desktop Menu Layout */
 @media (min-width: 768px) {
-    .nav-links {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-    }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
 
-    .mobile-nav-btn {
-        display: none;
-        /* Hide the mobile contact button when on desktop */
-    }
+  .nav-links a {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
 
-    .mobile-toggle-btn {
-        display: none;
-        /* Hide hamburger */
-    }
+  .nav-links a:hover {
+    color: var(--text-primary);
+  }
 
-    .desktop-contact-btn {
-        display: inline-flex;
-        /* Show header contact button */
-    }
+  .mobile-nav-btn {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: none;
+  }
+
+  .desktop-contact-btn {
+    display: inline-flex;
+  }
 }
