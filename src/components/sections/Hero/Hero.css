@@ -44,6 +44,20 @@
   z-index: 10;
 }
 
+.hero-logo-wrapper {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo-large {
+  height: clamp(80px, 15vw, 150px);
+  width: auto;
+  object-fit: contain;
+  /* Optional: filter to make it stand out or match theme if needed */
+  /* filter: drop-shadow(0 0 20px rgba(0,0,0,0.1)); */
+}
+
 .hero-title {
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.05;
@@ -140,6 +154,7 @@
   border: 1px solid var(--card-border);
   background: var(--neutral-100);
   opacity: 0.8;
+  border-radius: 999px;
 }
 
 .dark .hero-btn.secondary {

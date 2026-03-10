@@ -29,7 +29,7 @@ export default function Navbar() {
           className="nav-logo"
           onClick={() => setMobileMenuOpen(false)}
         >
-          NEXAWEB
+          <img src="/assets/icon.png" alt="NEXAWEB Logo" className="logo-img" />
         </a>
 
         <nav className={`nav-links ${mobileMenuOpen ? "open" : ""}`}>

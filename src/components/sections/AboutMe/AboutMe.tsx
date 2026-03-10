@@ -3,7 +3,7 @@ import "./AboutMe.css";
 
 export default function AboutMe() {
   return (
-    <section className="about-section">
+    <section className="about-section" id="sobre-mi">
       <div className="container about-container">
         <motion.div
           className="about-content"
@@ -13,22 +13,12 @@ export default function AboutMe() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="section-title">
-            La tecnología no debería ser un obstáculo.
+            Transformamos la complejidad técnica en resultados.
           </h2>
 
           <div className="about-text-wrapper">
             <p className="about-text">
-              En NEXAWEB, somos un equipo especializado en transformar la
-              complejidad técnica en experiencias digitales fluidas, modernas y
-              rentables.
-            </p>
-            <p className="about-text">
-              Para los negocios que buscan escalar, una web lenta o confusa
-              significa pérdida de clientes de manera silenciosa. Nuestro
-              enfoque combina un diseño minimalista de altísima resolución con
-              una arquitectura tecnológica de vanguardia para garantizar que tu
-              marca comunique autoridad y genere resultados medibles desde el
-              primer segundo.
+              Soy <strong>Iker Delgado Gras</strong> y en <strong>NEXAWEB</strong> transformamos la complejidad técnica en experiencias digitales modernas que impulsan el crecimiento de tu negocio.
             </p>
           </div>
         </motion.div>

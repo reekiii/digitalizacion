@@ -35,6 +35,19 @@ export default function Hero() {
       <div className="hero-shape-2"></div>
 
       <div className="container hero-container">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="hero-logo-wrapper"
+        >
+          <img
+            src="/assets/logo.png"
+            alt="NEXAWEB Logo"
+            className="hero-logo-large"
+          />
+        </motion.div>
+
         <motion.h1
           className="hero-title"
           variants={containerVariants}
