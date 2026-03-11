@@ -3,6 +3,25 @@
   position: relative;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--card-border);
+  background-image:
+    radial-gradient(circle at 80% 20%, var(--neutral-200) 0%, transparent 45%),
+    radial-gradient(var(--neutral-300) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    28px 28px;
+  transition:
+    background-color 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.dark .audit-section {
+  background-image:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(63, 63, 70, 0.3) 0%,
+      transparent 45%
+    ),
+    radial-gradient(rgba(39, 39, 42, 0.6) 1px, transparent 1px);
 }
 
 .audit-header {
@@ -113,4 +132,5 @@
 .audit-card-link:hover {
   opacity: 0.9;
   transform: scale(1.02);
+  color: var(--bg-color);
 }

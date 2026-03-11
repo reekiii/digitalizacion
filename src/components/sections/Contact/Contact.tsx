@@ -65,6 +65,17 @@ export default function Contact() {
                             </div>
 
                             <div className="form-group">
+                                <label htmlFor="pack">Pack deseado</label>
+                                <select id="pack" defaultValue="">
+                                    <option value="" disabled>Selecciona un pack...</option>
+                                    <option value="starter">Pack Starter</option>
+                                    <option value="business">Pack Business</option>
+                                    <option value="premium">Pack Premium</option>
+                                    <option value="unknown">Aún no lo sé</option>
+                                </select>
+                            </div>
+
+                            <div className="form-group">
                                 <label htmlFor="message">Mensaje</label>
                                 <textarea
                                     id="message"

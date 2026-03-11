@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import GlslNoiseShader from "../../ui/GlslNoiseShader/GlslNoiseShader";
 import "./FAQ.css";
 
 const faqs = [
@@ -59,10 +60,25 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="faq-section">
+      <GlslNoiseShader />
       <div className="container">
-        <h2 className="section-title text-center">Preguntas Frecuentes</h2>
+        <motion.h2
+          className="section-title text-center"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+        >
+          Preguntas Frecuentes
+        </motion.h2>
 
-        <div className="faq-container soft-glass">
+        <motion.div
+          className="faq-container soft-glass"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+        >
           {faqs.map((faq, index) => (
             <div key={index} className="faq-item">
               <button
@@ -91,7 +107,7 @@ export default function FAQ() {
               </AnimatePresence>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

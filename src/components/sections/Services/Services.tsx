@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Layout, Rocket, RefreshCw } from "lucide-react";
+import GlslNoiseShader from "../../ui/GlslNoiseShader/GlslNoiseShader";
 import "./Services.css";
 
 const services = [
@@ -23,15 +24,22 @@ const services = [
 export default function Services() {
   return (
     <section id="servicios" className="services-section">
+      <GlslNoiseShader />
       <div className="container">
-        <div className="services-header">
+        <motion.div
+          className="services-header"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="pricing-badge">Servicios</div>
           <h2 className="section-title">Lo que hacemos en NEXAWEB</h2>
           <p className="services-subtitle">
             Soluciones digitales de alto impacto para negocios que buscan el
             siguiente nivel.
           </p>
-        </div>
+        </motion.div>
 
         <div className="services-grid features-grid">
           {services.map((service, index) => (

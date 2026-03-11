@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Video, Calendar } from "lucide-react";
+import GlslNoiseShader from "../../ui/GlslNoiseShader/GlslNoiseShader";
 import "./Audit.css";
 
 export default function Audit() {
@@ -29,6 +30,7 @@ export default function Audit() {
 
   return (
     <section className="audit-section" id="audit">
+      <GlslNoiseShader />
       <div className="container">
         <motion.div
           className="audit-header"

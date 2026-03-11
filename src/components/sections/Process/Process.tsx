@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, PenTool, Code, Rocket } from "lucide-react";
+import GlslNoiseShader from "../../ui/GlslNoiseShader/GlslNoiseShader";
 import "./Process.css";
 
 export default function Process() {
@@ -32,6 +33,7 @@ export default function Process() {
 
   return (
     <section className="process-section" id="process">
+      <GlslNoiseShader />
       <div className="container">
         <div className="process-grid">
           <motion.div
@@ -55,23 +57,23 @@ export default function Process() {
           </motion.div>
 
           <div className="process-steps">
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.4 }}
-            >
-              {steps.map((step, i) => (
-                <div key={i} className="step-item soft-glass">
-                  <div className="step-day">{step.day}</div>
-                  <div className="step-icon">{step.icon}</div>
-                  <div className="step-text">
-                    <h3 className="step-title">{step.title}</h3>
-                    <p className="step-desc">{step.desc}</p>
-                  </div>
+            {steps.map((step, i) => (
+              <motion.div
+                key={i}
+                className="step-item soft-glass"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <div className="step-day">{step.day}</div>
+                <div className="step-icon">{step.icon}</div>
+                <div className="step-text">
+                  <h3 className="step-title">{step.title}</h3>
+                  <p className="step-desc">{step.desc}</p>
                 </div>
-              ))}
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

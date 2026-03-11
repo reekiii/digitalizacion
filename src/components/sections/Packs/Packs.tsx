@@ -118,13 +118,19 @@ export default function Packs() {
   return (
     <section id="packs" className="packs-section">
       <div className="container">
-        <div className="packs-header">
+        <motion.div
+          className="packs-header"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="pricing-badge">Planes</div>
           <h2 className="section-title">Packs de Diseño Web</h2>
           <p className="packs-subtitle">
             Escalabilidad y rendimiento adaptados a tus necesidades.
           </p>
-        </div>
+        </motion.div>
 
         <div className="packs-grid">
           {plans.map((plan, index) => (

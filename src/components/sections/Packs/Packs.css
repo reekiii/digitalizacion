@@ -3,25 +3,9 @@
   position: relative;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--card-border);
-  background-image:
-    radial-gradient(circle at 15% 50%, var(--neutral-200) 0%, transparent 40%),
-    radial-gradient(var(--neutral-300) 1px, transparent 1px);
-  background-size:
-    100% 100%,
-    24px 24px;
   transition:
     background-color 0.5s ease,
     border-color 0.5s ease;
-}
-
-.dark .packs-section {
-  background-image:
-    radial-gradient(
-      circle at 15% 50%,
-      rgba(39, 39, 42, 0.4) 0%,
-      transparent 40%
-    ),
-    radial-gradient(rgba(39, 39, 42, 0.5) 1px, transparent 1px);
 }
 
 .packs-header {
@@ -81,9 +65,13 @@
   transform: translateX(-50%);
   width: 90px;
   height: 22px;
-  background: #000000;
+  background: var(--neutral-900);
   border-radius: 12px;
   z-index: 20;
+}
+
+.dark .pack-card::before {
+  background: #000000;
 }
 
 .pack-card.highlighted {
@@ -119,7 +107,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000000;
+  background: var(--neutral-900);
   color: #ffffff;
   font-size: 0.65rem;
   padding: 0 1rem;
@@ -129,6 +117,10 @@
   text-transform: uppercase;
   z-index: 25;
   white-space: nowrap;
+}
+
+.dark .pack-badge {
+  background: #000000;
 }
 
 .pack-card.highlighted .pack-badge {

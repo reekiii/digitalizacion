@@ -1,6 +1,25 @@
 .faq-section {
   padding: 8rem 0;
+  position: relative;
   background-color: var(--bg-color);
+  overflow: hidden;
+  background-image:
+    radial-gradient(circle at 75% 60%, var(--neutral-200) 0%, transparent 45%),
+    radial-gradient(var(--neutral-300) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    28px 28px;
+  transition: background-color 0.5s ease;
+}
+
+.dark .faq-section {
+  background-image:
+    radial-gradient(
+      circle at 75% 60%,
+      rgba(63, 63, 70, 0.3) 0%,
+      transparent 45%
+    ),
+    radial-gradient(rgba(39, 39, 42, 0.6) 1px, transparent 1px);
 }
 
 .faq-container {

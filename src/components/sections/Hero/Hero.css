@@ -1,6 +1,6 @@
 .hero-section {
-  padding-top: 10rem;
-  padding-bottom: 6rem;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -15,6 +15,13 @@
   background-size:
     100% 100%,
     100% 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .dark .hero-section {

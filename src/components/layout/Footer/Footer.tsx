@@ -5,7 +5,6 @@ import "./Footer.css";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  // Legal modals state
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [isTermsOpen, setIsTermsOpen] = useState(false);
   const [isCookiesOpen, setIsCookiesOpen] = useState(false);
@@ -97,6 +96,15 @@ export default function Footer() {
               moderna.
             </p>
           </div>
+
+          <nav className="footer-nav">
+            <p className="footer-nav-title">Navegación</p>
+            <a href="#servicios">Servicios</a>
+            <a href="#packs">Packs & Precios</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
         </div>
 
         <div className="footer-bottom">

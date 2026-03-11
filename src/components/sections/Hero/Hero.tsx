@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import LightRays from "../../ui/light-rays";
+import BackgroundBeams from "../../ui/BackgroundBeams/BackgroundBeams";
 import "./Hero.css";
+
 
 export default function Hero() {
   const titleText = "Diseño webs que convierten visitas en clientes";
@@ -30,9 +32,8 @@ export default function Hero() {
     <section id="inicio" className="hero-section">
       <div className="hero-light-rays-container">
         <LightRays />
+        <BackgroundBeams />
       </div>
-      <div className="hero-shape-1"></div>
-      <div className="hero-shape-2"></div>
 
       <div className="container hero-container">
         <motion.div
