@@ -90,10 +90,9 @@ export default function Footer() {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <h3>NEXAWEB</h3>
+            <h3>GrasDesign</h3>
             <p>
-              Agencia de diseño web de alto rendimiento y arquitectura UI
-              moderna.
+              Agencia de marketing digital y diseño web de alto rendimiento.
             </p>
           </div>
 
@@ -109,7 +108,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p className="copyright">
-            &copy; {currentYear} NEXAWEB. Todos los derechos reservados.
+            &copy; {currentYear} GrasDesign. Todos los derechos reservados.
           </p>
           <div className="legal-links">
             <button
