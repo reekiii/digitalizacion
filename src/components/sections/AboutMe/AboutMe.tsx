@@ -18,7 +18,7 @@ export default function AboutMe() {
 
           <div className="about-text-wrapper">
             <p className="about-text">
-              Soy <strong>Iker Delgado Gras</strong> y en <strong>NEXAWEB</strong> transformamos la complejidad técnica en experiencias digitales modernas que impulsan el crecimiento de tu negocio.
+              Soy <strong>Iker Delgado Gras</strong> y en <strong>GrasDesign</strong> transformamos la complejidad técnica en experiencias digitales modernas que impulsan el crecimiento de tu negocio.
             </p>
           </div>
         </motion.div>

@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "¿Soy el dueño legal de mi página y mi código?",
-    a: "Totalmente. En NEXAWEB configuramos las cuentas de GitHub y Vercel bajo tu propio nombre. El código es un activo de tu empresa y tú tienes las llaves de acceso desde el primer día.",
+    a: "Totalmente. En GrasDesign configuramos las cuentas de GitHub y Vercel bajo tu propio nombre. El código es un activo de tu empresa y tú tienes las llaves de acceso desde el primer día.",
   },
   {
     q: "¿Necesito conocimientos técnicos para mantener la web?",
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "¿Por qué usáis esta tecnología y no WordPress?",
-    a: "En NEXAWEB utilizamos tecnologías modernas (Next.js y Vercel) porque son infinitamente más rápidas y seguras. Esto nos permite alcanzar rendimientos extremos como el de Salty Soul Trips, con cargas en menos de 1 segundo y 99 de PageSpeed, algo muy difícil de lograr con herramientas tradicionales.",
+    a: "En GrasDesign utilizamos tecnologías modernas (Next.js y Vercel) porque son infinitamente más rápidas y seguras. Esto nos permite alcanzar rendimientos extremos como el de Salty Soul Trips, con cargas en menos de 1 segundo y 99 de PageSpeed, algo muy difícil de lograr con herramientas tradicionales.",
   },
   {
     q: "¿Qué sucede si necesito hacer cambios en el futuro?",

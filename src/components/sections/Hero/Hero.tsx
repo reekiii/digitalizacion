@@ -44,7 +44,7 @@ export default function Hero() {
         >
           <img
             src="/assets/logo.png"
-            alt="NEXAWEB Logo"
+            alt="GrasDesign Logo"
             className="hero-logo-large"
           />
         </motion.div>
