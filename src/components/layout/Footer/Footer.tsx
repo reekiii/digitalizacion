@@ -12,24 +12,26 @@ export default function Footer() {
   const privacyContent = (
     <>
       <p>
-        En NEXAWEB ("nosotros", "nuestro"), valoramos su privacidad y estamos
-        comprometidos a proteger su información personal.
+        En <strong>GrasDesign</strong>, valoramos su privacidad y estamos
+        plenamente comprometidos con la protección de sus datos personales, en
+        estricto cumplimiento con el Reglamento General de Protección de Datos (RGPD)
+        y la normativa aplicable en vigor.
       </p>
-      <h3>1. Información que recopilamos</h3>
+      <h3>1. Recopilación y Uso de Datos</h3>
       <p>
-        Recopilamos información que usted nos proporciona directamente al
-        rellenar formularios en nuestro sitio web técnica y de usabilidad.
+        Únicamente recopilamos la información estrictamente necesaria
+        (nombre, correo electrónico y detalles del proyecto) que usted nos
+        proporciona voluntariamente a través de nuestros formularios de contacto,
+        con el fin exclusivo de gestionar su solicitud y ofrecerle nuestros
+        servicios de diseño y desarrollo web.
       </p>
-      <h3>2. Uso de la información</h3>
+      <h3>2. Protección y Derechos</h3>
       <p>
-        Utilizamos la información recopilada para proporcionarle nuestros
-        servicios, mejorar nuestro sitio web y comunicarnos con usted.
-      </p>
-      <h3>3. Compartir información</h3>
-      <p>
-        No vendemos, intercambiamos ni transferimos su información personal a
-        terceros sin su consentimiento, excepto cuando sea necesario para
-        cumplir con la ley.
+        Sus datos son tratados con la máxima confidencialidad y alojados en
+        servidores seguros. No compartimos, vendemos ni cedemos sus datos a
+        terceros, salvo obligación legal. Usted tiene derecho a acceder,
+        rectificar, cancelar u oponerse al tratamiento de sus datos en cualquier
+        momento, enviándonos una solicitud por correo electrónico.
       </p>
     </>
   );
@@ -37,24 +39,29 @@ export default function Footer() {
   const termsContent = (
     <>
       <p>
-        Al acceder y utilizar este sitio web, usted acepta estar sujeto a estos
-        Términos de Servicio.
+        Bienvenido a <strong>GrasDesign</strong>. Al acceder y utilizar nuestro
+        sitio web y contratar nuestros servicios, usted acepta quedar vinculado a
+        los siguientes Términos de Servicio.
       </p>
-      <h3>1. Uso del Sitio</h3>
+      <h3>1. Prestación de Servicios</h3>
       <p>
-        El contenido de este sitio web es solo para su información general y
-        uso. Está sujeto a cambios sin previo aviso.
+        Nos especializamos en el diseño web de alto rendimiento y marketing digital.
+        Toda propuesta final, alcance técnico del proyecto y condiciones de pago
+        serán detalladas y acordadas previamente de forma formal antes de iniciar.
       </p>
       <h3>2. Propiedad Intelectual</h3>
       <p>
-        Este material incluye, pero no se limita a, el diseño, la disposición,
-        el aspecto, la apariencia y los gráficos. La reproducción está
-        prohibida.
+        Todo el contenido original mostrado en este sitio web (textos, gráficos,
+        logotipos y código fuente) es propiedad exclusiva de GrasDesign. Los
+        proyectos entregados a los clientes serán de su propiedad una vez abonada
+        la totalidad del servicio, según lo estipulado.
       </p>
       <h3>3. Limitación de Responsabilidad</h3>
       <p>
-        No seremos responsables de ningún daño indirecto, especial o consecuente
-        que surja de su uso de este sitio web o nuestros servicios.
+        Nos esforzamos por ofrecer un servicio de excelencia, ininterrumpido y libre
+        de errores; sin embargo, no garantizamos la disponibilidad continua del
+        sitio. No seremos responsables de daños indirectos derivados del uso de
+        nuestra plataforma.
       </p>
     </>
   );
@@ -62,25 +69,31 @@ export default function Footer() {
   const cookiesContent = (
     <>
       <p>
-        Este sitio web utiliza cookies para mejorar su experiencia mientras
-        navega por el sitio web.
+        Esta Política de Cookies explica cómo <strong>GrasDesign</strong> utiliza
+        cookies y tecnologías similares para reconocerle cuando visita nuestro
+        sitio web, con el objetivo de optimizar su experiencia de navegación.
       </p>
       <h3>1. ¿Qué son las cookies?</h3>
       <p>
-        Las cookies son pequeños archivos de texto que se utilizan para
-        almacenar pequeñas piezas de información. Se almacenan en su dispositivo
-        cuando el sitio web se carga en su navegador.
+        Las cookies son pequeños archivos de datos que se descargan en su
+        dispositivo al acceder a nuestra web. Permiten a la página recordar sus
+        acciones y preferencias durante un tiempo determinado.
       </p>
-      <h3>2. Cómo usamos las cookies</h3>
+      <h3>2. Tipos de Cookies que Utilizamos</h3>
       <p>
-        Utilizamos cookies esenciales para el funcionamiento básico del sitio y
-        cookies analíticas (si las acepta) para entender cómo interactúa con
-        nuestro sitio, lo que nos ayuda a mejorar nuestros servicios.
+        <strong>Cookies Técnicas:</strong> Fundamentales para el correcto
+        funcionamiento del sitio, la navegación segura y la visualización del
+        contenido de forma óptima. Son estrictamente necesarias.<br/><br/>
+        <strong>Cookies Analíticas:</strong> Nos ayudan a comprender cómo los
+        visitantes interactúan con la web, recopilando métricas y estadísticas
+        de forma anónima para identificar áreas de mejora.
       </p>
-      <h3>3. Gestionar cookies</h3>
+      <h3>3. Gestión y Revocación</h3>
       <p>
-        Puede cambiar sus preferencias de cookies en cualquier momento ajustando
-        la configuración de su navegador.
+        Usted puede aceptar, rechazar o configurar las cookies no esenciales a
+        través de nuestro banner de consentimiento inicial. Asimismo, puede
+        gestionar las cookies directamente desde los ajustes de seguridad de su
+        propio navegador web en cualquier momento.
       </p>
     </>
   );

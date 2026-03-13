@@ -4,7 +4,6 @@ import Hero from "./components/sections/Hero/Hero";
 import Performance from "./components/sections/Performance/Performance";
 import Audit from "./components/sections/Audit/Audit";
 import AboutMe from "./components/sections/AboutMe/AboutMe";
-import Sponsors from "./components/sections/Sponsors/Sponsors";
 import Services from "./components/sections/Services/Services";
 import Packs from "./components/sections/Packs/Packs";
 import Process from "./components/sections/Process/Process";
@@ -72,7 +71,6 @@ function App() {
         <Performance />
         <Audit />
         <AboutMe />
-        <Sponsors />
         <Services />
         <Packs />
         <Process />

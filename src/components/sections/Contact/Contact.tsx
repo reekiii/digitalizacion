@@ -23,13 +23,13 @@ export default function Contact() {
                         </p>
 
                         <div className="contact-details">
-                            <a href="mailto:ikerdelgras@gmail.com" className="contact-item">
+                            <a href="mailto:contactgrasdesign@gmail.com" className="contact-item">
                                 <div className="contact-icon-wrapper">
                                     <Mail size={20} />
                                 </div>
                                 <div>
                                     <p className="contact-item-label">Email</p>
-                                    <p className="contact-item-value">ikerdelgras@gmail.com</p>
+                                    <p className="contact-item-value">contactgrasdesign@gmail.com</p>
                                 </div>
                             </a>
 
