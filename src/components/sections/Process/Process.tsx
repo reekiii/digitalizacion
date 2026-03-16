@@ -1,9 +1,18 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Target, PenTool, Code, Rocket } from "lucide-react";
-import GlslNoiseShader from "../../ui/GlslNoiseShader/GlslNoiseShader";
+import { useIsDarkMode } from "../../../lib/useIsDarkMode";
+import Particles from "../../ui/Particles/Particles";
 import "./Process.css";
 
 export default function Process() {
+  const isDark = useIsDarkMode();
+  const [color, setColor] = useState("#ffffff");
+
+  useEffect(() => {
+    setColor(isDark ? "#ffffff" : "#000000");
+  }, [isDark]);
+
   const steps = [
     {
       day: "Día 1",
@@ -32,9 +41,16 @@ export default function Process() {
   ];
 
   return (
-    <section className="process-section" id="process">
-      <GlslNoiseShader />
-      <div className="container">
+    <section className="process-section relative overflow-hidden border-b border-border" id="process">
+      <Particles
+        className="absolute inset-0 z-[0]"
+        quantity={200}
+        staticity={30}
+        color={color}
+        ease={100}
+        refresh
+      />
+      <div className="container relative z-[10]">
         <div className="process-grid">
           <motion.div
             className="process-content"

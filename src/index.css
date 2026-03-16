@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* Grayscale Palette (Stable: higher number = darker) */
   --neutral-50: #fafafa;

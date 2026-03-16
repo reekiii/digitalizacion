@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Layout, Rocket, RefreshCw } from "lucide-react";
-import GlslNoiseShader from "../../ui/GlslNoiseShader/GlslNoiseShader";
+import { useIsDarkMode } from "../../../lib/useIsDarkMode";
+import Particles from "../../ui/Particles/Particles";
 import "./Services.css";
 
 const services = [
@@ -22,10 +24,24 @@ const services = [
 ];
 
 export default function Services() {
+  const isDark = useIsDarkMode();
+  const [color, setColor] = useState("#ffffff");
+
+  useEffect(() => {
+    setColor(isDark ? "#ffffff" : "#000000");
+  }, [isDark]);
+
   return (
-    <section id="servicios" className="services-section">
-      <GlslNoiseShader />
-      <div className="container">
+    <section id="servicios" className="services-section relative overflow-hidden border-b border-border">
+      <Particles
+        className="absolute inset-0 z-[0]"
+        quantity={200}
+        staticity={30}
+        color={color}
+        ease={100}
+        refresh
+      />
+      <div className="container relative z-[10]">
         <motion.div
           className="services-header"
           initial={{ opacity: 0, y: 24 }}

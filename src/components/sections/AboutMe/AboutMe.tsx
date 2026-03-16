@@ -3,7 +3,7 @@ import "./AboutMe.css";
 
 export default function AboutMe() {
   return (
-    <section className="about-section" id="sobre-mi">
+    <section className="about-section border-b border-border" id="sobre-mi">
       <div className="container about-container">
         <motion.div
           className="about-content"

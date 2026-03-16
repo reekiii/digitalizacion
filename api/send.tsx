@@ -1,5 +1,4 @@
 /** @jsxImportSource react */
-import React from 'react';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 import { ContactEmail } from '../src/components/ContactEmail.js';

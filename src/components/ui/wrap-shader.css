@@ -38,7 +38,11 @@
 }
 
 .warp-shader-title b {
-  background: linear-gradient(to bottom right, var(--text-primary), var(--text-secondary));
+  background: linear-gradient(
+    to bottom right,
+    var(--text-primary),
+    var(--text-secondary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
@@ -103,10 +107,18 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+.warp-shader-container img {
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto 2rem auto;
+  display: block;
+}
+
 .warp-shader-btn-white:hover {
   transform: translateY(-3px) scale(1.02);
   opacity: 1;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  color: var(--bg-color); /* Maintain readability on hover */
 }
 
 @media (min-width: 640px) {

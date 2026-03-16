@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import GlslNoiseShader from "../../ui/GlslNoiseShader/GlslNoiseShader";
+import { useIsDarkMode } from "../../../lib/useIsDarkMode";
+import Particles from "../../ui/Particles/Particles";
 import "./FAQ.css";
 
 const faqs = [
@@ -52,6 +53,13 @@ const faqs = [
 ];
 
 export default function FAQ() {
+  const isDark = useIsDarkMode();
+  const [color, setColor] = useState("#ffffff");
+
+  useEffect(() => {
+    setColor(isDark ? "#ffffff" : "#000000");
+  }, [isDark]);
+
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleAccordion = (index: number) => {
@@ -59,9 +67,16 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="faq-section">
-      <GlslNoiseShader />
-      <div className="container">
+    <section id="faq" className="faq-section relative overflow-hidden">
+      <Particles
+        className="absolute inset-0 z-[0]"
+        quantity={200}
+        staticity={30}
+        color={color}
+        ease={100}
+        refresh
+      />
+      <div className="container relative z-[10]">
         <motion.h2
           className="section-title text-center"
           initial={{ opacity: 0, y: 24 }}

@@ -1,9 +1,18 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { MessageCircle, Video, Calendar } from "lucide-react";
-import GlslNoiseShader from "../../ui/GlslNoiseShader/GlslNoiseShader";
+import { useIsDarkMode } from "../../../lib/useIsDarkMode";
+import Particles from "../../ui/Particles/Particles";
 import "./Audit.css";
 
 export default function Audit() {
+  const isDark = useIsDarkMode();
+  const [color, setColor] = useState("#ffffff");
+
+  useEffect(() => {
+    setColor(isDark ? "#ffffff" : "#000000");
+  }, [isDark]);
+
   const options = [
     {
       icon: <MessageCircle size={32} />,
@@ -29,9 +38,16 @@ export default function Audit() {
   ];
 
   return (
-    <section className="audit-section" id="audit">
-      <GlslNoiseShader />
-      <div className="container">
+    <section className="audit-section relative overflow-hidden" id="audit">
+      <Particles
+        className="absolute inset-0 z-[0]"
+        quantity={200}
+        staticity={30}
+        color={color}
+        ease={100}
+        refresh
+      />
+      <div className="container relative z-[10]">
         <motion.div
           className="audit-header"
           initial={{ opacity: 0, y: 20 }}
