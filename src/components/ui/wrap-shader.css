@@ -1,0 +1,106 @@
+.warp-shader-main {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.warp-shader-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.warp-shader-content {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.warp-shader-container {
+  max-width: 1120px;
+  width: 100%;
+  text-align: center;
+}
+
+.warp-shader-title {
+  color: var(--text-primary);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-family: var(--font-geist);
+  font-weight: 300;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  text-wrap: balance;
+  transition: color 0.5s ease;
+}
+
+.warp-shader-desc {
+  color: var(--text-secondary);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-family: var(--font-geist);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 48rem;
+  margin: 0 auto 2rem auto;
+  transition: color 0.5s ease;
+}
+
+.warp-shader-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.warp-shader-btn {
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 250px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.warp-shader-btn-glass {
+  background: var(--glass-bg-base);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border-dark);
+  color: var(--text-primary);
+}
+
+.warp-shader-btn-glass:hover {
+  background: var(--glass-bg-base);
+  transform: scale(1.05);
+  color: var(--text-primary);
+}
+
+.warp-shader-btn-white {
+  background: var(--text-primary);
+  color: var(--bg-color);
+}
+
+.warp-shader-btn-white:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  color: var(--bg-color);
+}
+
+@media (min-width: 640px) {
+  .warp-shader-actions {
+    flex-direction: row;
+  }
+  .warp-shader-btn {
+    width: auto;
+  }
+}
