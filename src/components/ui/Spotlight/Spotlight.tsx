@@ -9,10 +9,7 @@ interface SpotlightProps {
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
   return (
     <svg
-      className={cn(
-        "spotlight-svg animate-spotlight",
-        className
-      )}
+      className={cn("spotlight-svg animate-spotlight", className)}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3787 2842"
       fill="none"
