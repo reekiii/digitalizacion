@@ -1,5 +1,6 @@
 import { Warp } from "@paper-design/shaders-react";
 import { useIsDarkMode } from "../../lib/useIsDarkMode";
+import { Spotlight } from "./Spotlight/Spotlight";
 import "./wrap-shader.css";
 
 export default function WarpShaderHero() {
@@ -22,6 +23,10 @@ export default function WarpShaderHero() {
   return (
     <main className="warp-shader-main">
       <div className="warp-shader-bg">
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill={isDark ? "white" : "rgba(0,0,0,0.1)"}
+        />
         <Warp
           style={{ height: "100%", width: "100%" }}
           proportion={0.45}
@@ -42,7 +47,7 @@ export default function WarpShaderHero() {
         <div className="warp-shader-container">
           <img src="/assets/logo.png" alt="Logo" />
           <h1 className="warp-shader-title">
-            Diseño webs que convierten visitas en clientes
+            <b>Diseño webs</b> que convierten visitas en clientes
           </h1>
 
           <p className="warp-shader-desc">

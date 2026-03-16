@@ -27,24 +27,33 @@
 
 .warp-shader-title {
   color: var(--text-primary);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.5rem, 8vw, 5rem);
   font-family: var(--font-geist);
-  font-weight: 300;
-  margin-bottom: 2rem;
-  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  line-height: 1;
   text-wrap: balance;
   transition: color 0.5s ease;
+  letter-spacing: -0.02em;
+}
+
+.warp-shader-title b {
+  background: linear-gradient(to bottom right, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
 .warp-shader-desc {
   color: var(--text-secondary);
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
   font-family: var(--font-geist);
   font-weight: 300;
   line-height: 1.6;
-  max-width: 48rem;
-  margin: 0 auto 2rem auto;
+  max-width: 42rem;
+  margin: 0 auto 2.5rem auto;
   transition: color 0.5s ease;
+  opacity: 0.9;
 }
 
 .warp-shader-actions {
@@ -57,43 +66,47 @@
 }
 
 .warp-shader-btn {
-  padding: 1rem 2rem;
+  padding: 0.875rem 2.5rem;
   border-radius: 999px;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.05rem;
   width: 100%;
   max-width: 250px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: -0.01em;
 }
 
 .warp-shader-btn-glass {
-  background: var(--glass-bg-base);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--glass-border-dark);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .warp-shader-btn-glass:hover {
-  background: var(--glass-bg-base);
-  transform: scale(1.05);
-  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .warp-shader-btn-white {
   background: var(--text-primary);
   color: var(--bg-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .warp-shader-btn-white:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-  color: var(--bg-color);
+  transform: translateY(-3px) scale(1.02);
+  opacity: 1;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 640px) {
