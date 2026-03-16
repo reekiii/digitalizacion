@@ -25,6 +25,28 @@
   text-align: center;
 }
 
+/* Responsive Logo Styling */
+.warp-shader-container img {
+  width: 100%;
+  max-width: 220px; /* Móvil */
+  height: auto;
+  margin: 0 auto 2rem auto;
+  display: block;
+  transition: max-width 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .warp-shader-container img {
+    max-width: 380px; /* Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .warp-shader-container img {
+    max-width: 500px; /* Desktop */
+  }
+}
+
 .warp-shader-title {
   color: var(--text-primary);
   font-size: clamp(2.5rem, 8vw, 5rem);
@@ -44,6 +66,7 @@
     var(--text-secondary)
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
@@ -107,18 +130,10 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.warp-shader-container img {
-  max-width: 500px;
-  height: auto;
-  margin: 0 auto 2rem auto;
-  display: block;
-}
-
 .warp-shader-btn-white:hover {
   transform: translateY(-3px) scale(1.02);
-  opacity: 1;
+  color: var(--bg-color);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  color: var(--bg-color); /* Maintain readability on hover */
 }
 
 @media (min-width: 640px) {
