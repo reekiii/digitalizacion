@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
+import { ContactEmail } from '../src/components/ContactEmail';
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   try {
@@ -21,20 +22,15 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       from: 'GrasDesign <onboarding@resend.dev>', // Change this if you have a custom domain
       to: ['contactgrasdesign@gmail.com'],
       subject: `🚀 Nuevo lead: ${name}`,
-      html: `
-        <div style="font-family: sans-serif; padding: 20px; background-color: #f4f4f4;">
-          <div style="background-color: #fff; padding: 20px; border-radius: 8px; border-top: 4px solid #00b4d8;">
-            <h2 style="color: #333">🚀 Nuevo lead de Grasdesign</h2>
-            <p><strong>Nombre:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Teléfono:</strong> ${phone}</p>
-            <p><strong>Pack deseado:</strong> ${pack}</p>
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0" />
-            <p><strong>Mensaje:</strong></p>
-            <p style="white-space: pre-wrap; color: #555">${message}</p>
-          </div>
-        </div>
-      `,
+      react: (
+        <ContactEmail
+          name={name}
+          email={email}
+          phone={phone}
+          pack={pack}
+          message={message}
+        />
+      ),
     });
 
     if (error) {

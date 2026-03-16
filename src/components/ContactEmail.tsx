@@ -1,5 +1,18 @@
-// components/ContactEmail.tsx
-export const ContactEmail = ({ nombre, email, telefono, paquete, mensaje }: any) => (
+interface ContactEmailProps {
+  name: string;
+  email: string;
+  phone: string;
+  pack: string;
+  message: string;
+}
+
+export const ContactEmail = ({
+  name,
+  email,
+  phone,
+  pack,
+  message,
+}: ContactEmailProps) => (
   <div
     style={{
       fontFamily: "sans-serif",
@@ -17,16 +30,16 @@ export const ContactEmail = ({ nombre, email, telefono, paquete, mensaje }: any)
     >
       <h2 style={{ color: "#333" }}>🚀 Nuevo lead de Grasdesign</h2>
       <p>
-        <strong>Nombre:</strong> {nombre}
+        <strong>Nombre:</strong> {name}
       </p>
       <p>
         <strong>Email:</strong> {email}
       </p>
       <p>
-        <strong>Teléfono:</strong> {telefono}
+        <strong>Teléfono:</strong> {phone}
       </p>
       <p>
-        <strong>Pack deseado:</strong> {paquete}
+        <strong>Pack deseado:</strong> {pack}
       </p>
       <hr
         style={{ border: "0", borderTop: "1px solid #eee", margin: "20px 0" }}
@@ -34,7 +47,7 @@ export const ContactEmail = ({ nombre, email, telefono, paquete, mensaje }: any)
       <p>
         <strong>Mensaje:</strong>
       </p>
-      <p style={{ whiteSpace: "pre-wrap", color: "#555" }}>{mensaje}</p>
+      <p style={{ whiteSpace: "pre-wrap", color: "#555" }}>{message}</p>
     </div>
   </div>
 );
