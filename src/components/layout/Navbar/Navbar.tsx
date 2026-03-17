@@ -1,5 +1,4 @@
 import ThemeToggle from "../../ui/ThemeToggle/ThemeToggle";
-import Magnetic from "../../ui/Magnetic/Magnetic";
 import "./Navbar.css";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -41,8 +40,20 @@ export default function Navbar() {
           <a href="#inicio" onClick={() => setMobileMenuOpen(false)}>
             Inicio
           </a>
+          <a href="#audit" onClick={() => setMobileMenuOpen(false)}>
+            Auditoría
+          </a>
+          <a href="#sobre-mi" onClick={() => setMobileMenuOpen(false)}>
+            Sobre Mí
+          </a>
           <a href="#servicios" onClick={() => setMobileMenuOpen(false)}>
             Servicios
+          </a>
+          <a href="#tecnologia" onClick={() => setMobileMenuOpen(false)}>
+            Tecnología
+          </a>
+          <a href="#packs" onClick={() => setMobileMenuOpen(false)}>
+            Packs
           </a>
           <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
             FAQ
@@ -58,20 +69,16 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-actions">
-          <Magnetic>
-            <div className="flex items-center justify-center">
-              <ThemeToggle />
-            </div>
-          </Magnetic>
-          <Magnetic>
-            <a
-              href="#contacto"
-              className="btn-contact desktop-contact-btn"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contacto
-            </a>
-          </Magnetic>
+          <div className="flex items-center justify-center">
+            <ThemeToggle />
+          </div>
+          <a
+            href="#contacto"
+            className="btn-contact desktop-contact-btn"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Contacto
+          </a>
           <button
             className="mobile-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

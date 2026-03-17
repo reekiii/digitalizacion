@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/layout/Navbar/Navbar";
 import Hero from "./components/sections/Hero/Hero";
 import Performance from "./components/sections/Performance/Performance";
 import Audit from "./components/sections/Audit/Audit";
 import AboutMe from "./components/sections/AboutMe/AboutMe";
 import Services from "./components/sections/Services/Services";
+import Sponsors from "./components/sections/Sponsors/Sponsors";
 import Packs from "./components/sections/Packs/Packs";
 import Process from "./components/sections/Process/Process";
 import Testimonials from "./components/sections/Testimonials/Testimonials";
@@ -31,7 +33,6 @@ function ScrollManager() {
         anchor.hash.startsWith("#") &&
         (anchor.pathname === window.location.pathname || anchor.pathname === "/")
       ) {
-        // If we're not on home and click an anchor, let default link behavior happen (navigation)
         if (window.location.pathname !== "/") return;
 
         e.preventDefault();
@@ -72,7 +73,6 @@ function ScrollManager() {
     return () => document.removeEventListener("click", handleAnchorClick);
   }, [pathname]);
 
-  // Handle hash scroll on direct entry or navigation from other pages
   useEffect(() => {
     if (hash) {
       setTimeout(() => {
@@ -92,32 +92,62 @@ function ScrollManager() {
 
 function HomePage() {
   return (
-    <main>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.4 }}
+    >
       <Hero />
       <Performance />
       <Audit />
       <AboutMe />
       <Services />
+      <Sponsors />
       <Packs />
       <Process />
       <Testimonials />
       <FAQ />
       <Contact />
-    </main>
+    </motion.div>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  
+  return (
+    <>
+      <ScrollManager />
+      <Navbar />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<HomePage />} />
+          <Route 
+            path="*" 
+            element={
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <NotFound />
+              </motion.div>
+            } 
+          />
+        </Routes>
+      </AnimatePresence>
+      <Footer />
+      <CookieConsent />
+    </>
   );
 }
 
 function App() {
   return (
     <Router>
-      <ScrollManager />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-      <CookieConsent />
+      <AppContent />
     </Router>
   );
 }
