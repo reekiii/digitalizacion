@@ -1,4 +1,5 @@
-import { useRef, useState, ReactElement, cloneElement } from "react";
+import { useRef, useState } from "react";
+import type { ReactElement } from "react";
 import { motion } from "framer-motion";
 
 export default function Magnetic({ children }: { children: ReactElement }) {

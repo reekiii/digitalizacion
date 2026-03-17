@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { BackgroundPaths } from "../../ui/background-paths";
-import { ArrowLeft, Home } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
 import "./NotFound.css";
 

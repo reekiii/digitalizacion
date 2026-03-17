@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, X, ArrowRight, RotateCcw, Zap, Target, BarChart3, Smartphone } from "lucide-react";
+import { ArrowRight, RotateCcw, Zap, Target, BarChart3, Smartphone } from "lucide-react";
 import "./AuditQuiz.css";
 
 const questions = [
