@@ -46,7 +46,7 @@ export default function WarpShaderHero() {
       <div className="warp-shader-content">
         <div className="warp-shader-container">
           <img src="/assets/icon.png" alt="Logo" />
-          <h1 className="warp-shader-title">
+          <h1 className="warp-shader-title font-heading font-light tracking-tighter">
             <b>Diseño webs</b> que convierten visitas en clientes
           </h1>
 

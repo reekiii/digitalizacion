@@ -56,16 +56,16 @@
 .warp-shader-title {
   color: var(--text-primary);
   font-size: clamp(2.5rem, 8vw, 5rem);
-  font-family: var(--font-geist);
-  font-weight: 400;
   margin-bottom: 1.5rem;
   line-height: 1;
   text-wrap: balance;
   transition: color 0.5s ease;
-  letter-spacing: -0.02em;
+  padding: 0 0.2em;
+  overflow: visible;
 }
 
 .warp-shader-title b {
+  display: inline-block;
   background: linear-gradient(
     to bottom right,
     var(--text-primary),
@@ -75,12 +75,13 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
+  padding-right: 0.05em;
 }
 
 .warp-shader-desc {
   color: var(--text-secondary);
   font-size: clamp(1.1rem, 2vw, 1.25rem);
-  font-family: var(--font-geist);
+  font-family: var(--font-body);
   font-weight: 300;
   line-height: 1.6;
   max-width: 42rem;

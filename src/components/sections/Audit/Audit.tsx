@@ -56,7 +56,7 @@ export default function Audit() {
           transition={{ duration: 0.6 }}
         >
           <div className="audit-badge">Auditoría Express</div>
-          <h2 className="audit-title">
+          <h2 className="audit-title tracking-tight">
             Tu transformación empieza con una Auditoría Express (100% Gratis)
           </h2>
           <p className="audit-subtitle">

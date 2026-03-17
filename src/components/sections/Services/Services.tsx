@@ -50,7 +50,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
         >
           <div className="pricing-badge">Servicios</div>
-          <h2 className="section-title">Lo que hacemos en GrasDesign</h2>
+          <h2 className="section-title tracking-tight">Lo que hacemos en GrasDesign</h2>
           <p className="services-subtitle">
             Soluciones digitales de alto impacto para negocios que buscan el
             siguiente nivel.
