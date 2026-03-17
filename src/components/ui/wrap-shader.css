@@ -27,23 +27,29 @@
 
 /* Responsive Logo Styling */
 .warp-shader-container img {
-  width: 100%;
-  max-width: 220px; /* Móvil */
+  width: auto;
+  max-width: 80px; /* Móvil */
   height: auto;
   margin: 0 auto 2rem auto;
   display: block;
-  transition: max-width 0.3s ease;
+  transition: all 0.3s ease;
+  image-rendering: -webkit-optimize-contrast;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+}
+
+.dark .warp-shader-container img {
+  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.15));
 }
 
 @media (min-width: 768px) {
   .warp-shader-container img {
-    max-width: 380px; /* Tablet */
+    max-width: 100px; /* Tablet */
   }
 }
 
 @media (min-width: 1024px) {
   .warp-shader-container img {
-    max-width: 500px; /* Desktop */
+    max-width: 120px; /* Desktop */
   }
 }
 

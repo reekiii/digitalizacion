@@ -33,9 +33,17 @@
 }
 
 .logo-img {
-  height: 40px; /* Adjust based on desired size */
+  height: 32px;
   width: auto;
   object-fit: contain;
+  transition: height 0.3s ease;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+@media (min-width: 768px) {
+  .logo-img {
+    height: 42px;
+  }
 }
 
 .nav-actions {

@@ -14,10 +14,10 @@ export default function WarpShaderHero() {
   ];
 
   const darkColors = [
-    "hsla(240, 2%, 8%, 1.00)",
-    "hsla(150, 4%, 11%, 1.00)",
-    "hsla(180, 3%, 13%, 1.00)",
-    "hsla(170, 11%, 18%, 1.00)",
+    "hsla(240, 2%, 24%, 1.00)",
+    "hsla(0, 0%, 4%, 1.00)",
+    "hsla(180, 6%, 23%, 1.00)",
+    "hsla(0, 0%, 0%, 1.00)",
   ];
 
   return (
@@ -45,10 +45,7 @@ export default function WarpShaderHero() {
 
       <div className="warp-shader-content">
         <div className="warp-shader-container">
-          <img
-            src={isDark ? "/assets/logoOscuro.png" : "/assets/logoClaro.png"}
-            alt="Logo"
-          />
+          <img src="/assets/icon.png" alt="Logo" />
           <h1 className="warp-shader-title">
             <b>Diseño webs</b> que convierten visitas en clientes
           </h1>

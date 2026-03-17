@@ -29,7 +29,11 @@ export default function Navbar() {
           className="nav-logo"
           onClick={() => setMobileMenuOpen(false)}
         >
-          <img src="/assets/icon.png" alt="GrasDesign Logo" className="logo-img" />
+          <img
+            src="/assets/logo.png"
+            alt="GrasDesign Logo"
+            className="logo-img"
+          />
         </a>
 
         <nav className={`nav-links ${mobileMenuOpen ? "open" : ""}`}>
