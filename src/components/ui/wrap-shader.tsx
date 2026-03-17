@@ -1,6 +1,7 @@
 import { Warp } from "@paper-design/shaders-react";
 import { useIsDarkMode } from "../../lib/useIsDarkMode";
 import { Spotlight } from "./Spotlight/Spotlight";
+import Magnetic from "./Magnetic/Magnetic";
 import "./wrap-shader.css";
 
 export default function WarpShaderHero() {
@@ -45,7 +46,7 @@ export default function WarpShaderHero() {
 
       <div className="warp-shader-content">
         <div className="warp-shader-container">
-          <img src="/assets/icon.png" alt="Logo" />
+          <img src="/assets/icon.webp" alt="Logo" />
           <h1 className="warp-shader-title font-heading font-light tracking-tighter">
             <b>Diseño webs</b> que convierten visitas en clientes
           </h1>
@@ -56,20 +57,24 @@ export default function WarpShaderHero() {
           </p>
 
           <div className="warp-shader-actions">
-            <a
-              href="#contacto"
-              className="warp-shader-btn warp-shader-btn-glass"
-            >
-              Solicitar web
-            </a>
-            <a
-              href="https://www.saltysoultrips.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="warp-shader-btn warp-shader-btn-white"
-            >
-              Ver proyectos
-            </a>
+            <Magnetic>
+              <a
+                href="#contacto"
+                className="warp-shader-btn warp-shader-btn-glass"
+              >
+                Solicitar web
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a
+                href="https://www.saltysoultrips.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="warp-shader-btn warp-shader-btn-white"
+              >
+                Ver proyectos
+              </a>
+            </Magnetic>
           </div>
         </div>
       </div>

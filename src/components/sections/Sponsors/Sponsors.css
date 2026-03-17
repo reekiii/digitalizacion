@@ -1,78 +1,68 @@
 .sponsors-section {
-    padding: 4rem 0;
-    border-top: 1px solid var(--card-border);
-    border-bottom: 1px solid var(--card-border);
-    background-color: var(--bg-color);
-    overflow: hidden;
-    transition: background-color 0.5s ease, border-color 0.5s ease;
+  padding: 4rem 0;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--card-border);
+  overflow: hidden;
 }
 
 .sponsors-label {
-    text-align: center;
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    margin-bottom: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  opacity: 0.7;
 }
 
 .sponsors-marquee-container {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    width: 100%;
-}
-
-.sponsors-marquee-container::before,
-.sponsors-marquee-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 150px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.sponsors-marquee-container::before {
-    left: 0;
-    background: linear-gradient(to right, var(--bg-color) 0%, transparent 100%);
-}
-
-.sponsors-marquee-container::after {
-    right: 0;
-    background: linear-gradient(to left, var(--bg-color) 0%, transparent 100%);
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
 .sponsors-marquee {
-    display: inline-block;
-    animation: marquee 30s linear infinite;
-    padding-left: 2rem;
+  display: flex;
+  gap: 4rem;
+  white-space: nowrap;
+  width: max-content;
 }
 
-.sponsor-logo {
-    display: inline-block;
+.sponsor-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.sponsor-logo-wrapper:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.tech-icon {
+  font-size: 1.75rem;
+}
+
+.tech-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: var(--font-heading);
+}
+
+@media (max-width: 768px) {
+  .sponsors-marquee {
+    gap: 2.5rem;
+  }
+  
+  .tech-icon {
     font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--neutral-300);
-    margin: 0 3rem;
-    user-select: none;
-    transition: color 0.3s ease;
-}
-
-.dark .sponsor-logo {
-    color: var(--neutral-600);
-}
-
-.sponsor-logo:hover {
-    color: var(--text-secondary);
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  }
+  
+  .tech-name {
+    font-size: 0.95rem;
+  }
 }

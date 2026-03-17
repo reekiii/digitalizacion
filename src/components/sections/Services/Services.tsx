@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Layout, Rocket, RefreshCw } from "lucide-react";
 import { useIsDarkMode } from "../../../lib/useIsDarkMode";
 import Particles from "../../ui/Particles/Particles";
+import TiltCard from "../../ui/TiltCard";
 import "./Services.css";
 
 const services = [
@@ -59,18 +60,19 @@ export default function Services() {
 
         <div className="services-grid features-grid">
           {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="service-feature-card soft-glass"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <div className="feature-icon-wrapper">{service.icon}</div>
-              <h3 className="feature-title">{service.title}</h3>
-              <p className="feature-desc">{service.desc}</p>
-            </motion.div>
+            <TiltCard key={index} className="h-full">
+              <motion.div
+                className="service-feature-card soft-glass h-full"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="feature-icon-wrapper">{service.icon}</div>
+                <h3 className="feature-title">{service.title}</h3>
+                <p className="feature-desc">{service.desc}</p>
+              </motion.div>
+            </TiltCard>
           ))}
         </div>
       </div>

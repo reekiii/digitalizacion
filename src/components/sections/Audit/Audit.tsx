@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { MessageCircle, Video, Calendar } from "lucide-react";
 import { useIsDarkMode } from "../../../lib/useIsDarkMode";
 import Particles from "../../ui/Particles/Particles";
+import TiltCard from "../../ui/TiltCard";
+import AuditQuiz from "./AuditQuiz";
 import "./Audit.css";
 
 export default function Audit() {
@@ -67,23 +69,33 @@ export default function Audit() {
 
         <div className="audit-grid">
           {options.map((opt, i) => (
-            <motion.div
-              key={i}
-              className="audit-card soft-glass"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-            >
-              <div className="audit-icon">{opt.icon}</div>
-              <h3 className="audit-card-title">{opt.title}</h3>
-              <p className="audit-card-desc">{opt.desc}</p>
-              <a href={opt.link} className="audit-card-link">
-                {opt.action}
-              </a>
-            </motion.div>
+            <TiltCard key={i} className="h-full">
+              <motion.div
+                className="audit-card soft-glass h-full"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+              >
+                <div className="audit-icon">{opt.icon}</div>
+                <h3 className="audit-card-title">{opt.title}</h3>
+                <p className="audit-card-desc">{opt.desc}</p>
+                <a href={opt.link} className="audit-card-link">
+                  {opt.action}
+                </a>
+              </motion.div>
+            </TiltCard>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <AuditQuiz />
+        </motion.div>
       </div>
     </section>
   );

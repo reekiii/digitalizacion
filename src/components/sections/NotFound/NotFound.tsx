@@ -1,9 +1,18 @@
 import { motion } from "framer-motion";
 import { BackgroundPaths } from "../../ui/background-paths";
 import { ArrowLeft, Home } from "lucide-react";
+import { useEffect } from "react";
 import "./NotFound.css";
 
 export default function NotFound() {
+  useEffect(() => {
+    const prevTitle = document.title;
+    document.title = "404 - Página no encontrada | GrasDesign";
+    return () => {
+      document.title = prevTitle;
+    };
+  }, []);
+
   return (
     <div className="not-found-page">
       <BackgroundPaths className="not-found-bg">

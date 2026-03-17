@@ -60,12 +60,12 @@
 }
 
 .perf-metrics {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
     position: relative;
     overflow: hidden;
+    border-radius: var(--radius-lg);
 }
 
 /* Subtle tech pattern background */
@@ -83,6 +83,13 @@
     opacity: 0.5;
     z-index: -1;
     pointer-events: none;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    width: 100%;
 }
 
 .metric-item {
@@ -119,9 +126,12 @@
     }
 
     .perf-metrics {
-        grid-template-columns: repeat(3, 1fr);
         transform: perspective(1000px) rotateY(-5deg);
         transition: transform 0.3s ease;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .perf-metrics:hover {

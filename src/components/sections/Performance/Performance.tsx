@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Zap, CheckCircle2, BarChart } from 'lucide-react';
 import NumberTicker from '../../ui/NumberTicker/NumberTicker';
+import PerformanceChart from './PerformanceChart';
 import './Performance.css';
 
 export default function Performance() {
@@ -44,13 +45,16 @@ export default function Performance() {
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        {metrics.map((metric, i) => (
-                            <div key={i} className="metric-item">
-                                <div className="metric-icon">{metric.icon}</div>
-                                <div className="metric-value">{metric.value}</div>
-                                <div className="metric-label">{metric.label}</div>
-                            </div>
-                        ))}
+                        <PerformanceChart />
+                        <div className="metrics-grid">
+                            {metrics.map((metric, i) => (
+                                <div key={i} className="metric-item">
+                                    <div className="metric-icon">{metric.icon}</div>
+                                    <div className="metric-value">{metric.value}</div>
+                                    <div className="metric-label">{metric.label}</div>
+                                </div>
+                            ))}
+                        </div>
                     </motion.div>
                 </div>
             </div>

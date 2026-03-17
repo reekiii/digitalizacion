@@ -1,6 +1,7 @@
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { Check, ShieldCheck } from "lucide-react";
 import type { MouseEvent } from "react";
+import TiltCard from "../../ui/TiltCard";
 import "./Packs.css";
 
 const plans = [
@@ -134,7 +135,9 @@ export default function Packs() {
 
         <div className="packs-grid">
           {plans.map((plan, index) => (
-            <MagicCard key={index} plan={plan} index={index} />
+            <TiltCard key={index} className="h-full">
+              <MagicCard plan={plan} index={index} />
+            </TiltCard>
           ))}
         </div>
 

@@ -1,4 +1,5 @@
 import ThemeToggle from "../../ui/ThemeToggle/ThemeToggle";
+import Magnetic from "../../ui/Magnetic/Magnetic";
 import "./Navbar.css";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -30,7 +31,7 @@ export default function Navbar() {
           onClick={() => setMobileMenuOpen(false)}
         >
           <img
-            src="/assets/logo.png"
+            src="/assets/logo.webp"
             alt="GrasDesign Logo"
             className="logo-img"
           />
@@ -57,14 +58,20 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-actions">
-          <ThemeToggle />
-          <a
-            href="#contacto"
-            className="btn-contact desktop-contact-btn"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Contacto
-          </a>
+          <Magnetic>
+            <div className="flex items-center justify-center">
+              <ThemeToggle />
+            </div>
+          </Magnetic>
+          <Magnetic>
+            <a
+              href="#contacto"
+              className="btn-contact desktop-contact-btn"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contacto
+            </a>
+          </Magnetic>
           <button
             className="mobile-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
