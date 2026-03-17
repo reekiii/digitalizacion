@@ -1,7 +1,7 @@
-/** @jsxImportSource react */
+import * as React from 'react';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
-import { ContactEmail } from '../src/components/ContactEmail.js';
+import { ContactEmail } from '../src/components/ContactEmail';
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   try {
