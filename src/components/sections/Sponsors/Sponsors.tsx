@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { 
   SiReact, 
   SiTailwindcss, 
@@ -25,14 +26,17 @@ const techLogos = [
 ];
 
 export default function Sponsors() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef);
+
   return (
-    <section className="sponsors-section" id="tecnologia">
+    <section className="sponsors-section" id="tecnologia" ref={containerRef}>
       <div className="container">
         <p className="sponsors-label">Tecnología de alto impacto</p>
         <div className="sponsors-marquee-container">
           <motion.div 
             className="sponsors-marquee"
-            animate={{ x: [0, -1200] }} 
+            animate={isInView ? { x: [0, -1200] } : {}} 
             transition={{ 
               duration: 25, 
               repeat: Infinity, 

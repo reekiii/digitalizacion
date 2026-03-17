@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "../../../lib/utils";
+import { useInView } from "framer-motion";
 
 interface MousePosition {
   x: number;
@@ -79,6 +80,7 @@ export default function Particles({
 }: ParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(canvasContainerRef, { margin: "200px" });
   const context = useRef<CanvasRenderingContext2D | null>(null);
   const circles = useRef<Circle[]>([]);
   const mousePosition = useMousePosition();
@@ -96,7 +98,10 @@ export default function Particles({
     // Inicialización inicial
     resizeCanvas();
     drawParticles();
-    animate();
+    
+    if (isInView) {
+      animate();
+    }
 
     const resizeObserver = new ResizeObserver(() => {
       // Al redimensionar, solo ajustamos el canvas sin borrar las partículas (esto quita el parpadeo)
@@ -113,7 +118,7 @@ export default function Particles({
         window.cancelAnimationFrame(animationFrameId.current);
       }
     };
-  }, [color]);
+  }, [color, isInView]);
 
   useEffect(() => {
     onMouseMove();

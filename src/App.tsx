@@ -1,22 +1,33 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/layout/Navbar/Navbar";
 import Hero from "./components/sections/Hero/Hero";
-import Performance from "./components/sections/Performance/Performance";
-import Audit from "./components/sections/Audit/Audit";
-import AboutMe from "./components/sections/AboutMe/AboutMe";
-import Services from "./components/sections/Services/Services";
-import Sponsors from "./components/sections/Sponsors/Sponsors";
-import Packs from "./components/sections/Packs/Packs";
-import Process from "./components/sections/Process/Process";
-import Testimonials from "./components/sections/Testimonials/Testimonials";
-import FAQ from "./components/sections/FAQ/FAQ";
-import Contact from "./components/sections/Contact/Contact";
 import Footer from "./components/layout/Footer/Footer";
 import CookieConsent from "./components/ui/CookieConsent/CookieConsent";
-import NotFound from "./components/sections/NotFound/NotFound";
 import "./App.css";
+
+// Lazy Loaded Sections
+const Performance = lazy(() => import("./components/sections/Performance/Performance"));
+const Audit = lazy(() => import("./components/sections/Audit/Audit"));
+const AboutMe = lazy(() => import("./components/sections/AboutMe/AboutMe"));
+const Services = lazy(() => import("./components/sections/Services/Services"));
+const Sponsors = lazy(() => import("./components/sections/Sponsors/Sponsors"));
+const Packs = lazy(() => import("./components/sections/Packs/Packs"));
+const Process = lazy(() => import("./components/sections/Process/Process"));
+const Testimonials = lazy(() => import("./components/sections/Testimonials/Testimonials"));
+const FAQ = lazy(() => import("./components/sections/FAQ/FAQ"));
+const Contact = lazy(() => import("./components/sections/Contact/Contact"));
+const NotFound = lazy(() => import("./components/sections/NotFound/NotFound"));
+
+// Fallback for Suspense
+const SectionLoader = () => (
+  <div className="section-loader" style={{ height: "400px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+    <div className="loader-dots">
+      <span>.</span><span>.</span><span>.</span>
+    </div>
+  </div>
+);
 
 // Smooth Scroll Logic Wrapper
 function ScrollManager() {
@@ -75,13 +86,35 @@ function ScrollManager() {
 
   useEffect(() => {
     if (hash) {
-      setTimeout(() => {
-        const id = hash.replace("#", "");
+      const id = hash.replace("#", "");
+      
+      // Intentar scroll inmediato con un pequeño margen para el renderizado inicial
+      const scrollToElement = () => {
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
+          return true;
         }
-      }, 100);
+        return false;
+      };
+
+      if (!scrollToElement()) {
+        // Si no existe (debido al lazy loading), observamos el DOM hasta que aparezca
+        const observer = new MutationObserver(() => {
+          if (scrollToElement()) {
+            observer.disconnect();
+          }
+        });
+
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+
+        // Limpieza por si acaso el elemento nunca aparece
+        setTimeout(() => observer.disconnect(), 5000);
+        return () => observer.disconnect();
+      }
     } else {
       window.scrollTo(0, 0);
     }
@@ -99,16 +132,18 @@ function HomePage() {
       transition={{ duration: 0.4 }}
     >
       <Hero />
-      <Performance />
-      <Audit />
-      <AboutMe />
-      <Services />
-      <Sponsors />
-      <Packs />
-      <Process />
-      <Testimonials />
-      <FAQ />
-      <Contact />
+      <Suspense fallback={<SectionLoader />}>
+        <Performance />
+        <Audit />
+        <AboutMe />
+        <Services />
+        <Sponsors />
+        <Packs />
+        <Process />
+        <Testimonials />
+        <FAQ />
+        <Contact />
+      </Suspense>
     </motion.div>
   );
 }
@@ -132,7 +167,9 @@ function AppContent() {
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <NotFound />
+                <Suspense fallback={<SectionLoader />}>
+                  <NotFound />
+                </Suspense>
               </motion.div>
             } 
           />

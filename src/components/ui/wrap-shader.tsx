@@ -1,10 +1,14 @@
 import { Warp } from "@paper-design/shaders-react";
 import { useIsDarkMode } from "../../lib/useIsDarkMode";
 import { Spotlight } from "./Spotlight/Spotlight";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import "./wrap-shader.css";
 
 export default function WarpShaderHero() {
   const isDark = useIsDarkMode();
+  const containerRef = useRef<HTMLElement>(null);
+  const isInView = useInView(containerRef, { margin: "100px" });
 
   const lightColors = [
     "hsla(206, 30%, 96%, 1.00)",
@@ -21,26 +25,28 @@ export default function WarpShaderHero() {
   ];
 
   return (
-    <main className="warp-shader-main" id="inicio">
+    <main className="warp-shader-main" id="inicio" ref={containerRef}>
       <div className="warp-shader-bg">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill={isDark ? "white" : "rgba(0,0,0,0.1)"}
         />
-        <Warp
-          style={{ height: "100%", width: "100%" }}
-          proportion={0.45}
-          softness={1}
-          distortion={0.25}
-          swirl={0.8}
-          swirlIterations={10}
-          shape="checks"
-          shapeScale={0.1}
-          scale={1}
-          rotation={0}
-          speed={1}
-          colors={isDark ? darkColors : lightColors}
-        />
+        {isInView && (
+          <Warp
+            style={{ height: "100%", width: "100%" }}
+            proportion={0.45}
+            softness={1}
+            distortion={0.25}
+            swirl={0.8}
+            swirlIterations={10}
+            shape="checks"
+            shapeScale={0.1}
+            scale={1}
+            rotation={0}
+            speed={1}
+            colors={isDark ? darkColors : lightColors}
+          />
+        )}
       </div>
 
       <div className="warp-shader-content">

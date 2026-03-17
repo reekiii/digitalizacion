@@ -1,4 +1,6 @@
 import { cn } from "../../../lib/utils";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import "./Spotlight.css";
 
 interface SpotlightProps {
@@ -7,8 +9,14 @@ interface SpotlightProps {
 }
 
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
+  const containerRef = useRef<SVGSVGElement>(null);
+  const isInView = useInView(containerRef, { margin: "200px" });
+
+  if (!isInView) return <svg ref={containerRef} className={cn("spotlight-svg", className)} />;
+
   return (
     <svg
+      ref={containerRef}
       className={cn(
         "spotlight-svg animate-spotlight",
         className
