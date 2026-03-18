@@ -13,7 +13,7 @@ export default function AboutMe() {
           transition={{ duration: 0.6 }}
         >
           <div className="about-badge">Sobre mí</div>
-          <h2 className="section-title">
+          <h2 className="about-title">
             Hola, soy Iker Delgado.
           </h2>
           <div className="about-text-wrapper">

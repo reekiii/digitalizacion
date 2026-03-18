@@ -16,14 +16,26 @@
 
 .about-badge {
   display: inline-block;
-  padding: 0.5rem 1.25rem;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 100px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text-primary);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  background: var(--neutral-100);
+  border-radius: 999px;
   margin-bottom: 1.5rem;
+  transition: background-color 0.5s ease;
+}
+
+.dark .about-badge {
+  background: var(--neutral-800);
+}
+
+.about-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
 }
 
 .about-text-wrapper {
