@@ -20,13 +20,9 @@ const FAQ = lazy(() => import("./components/sections/FAQ/FAQ"));
 const Contact = lazy(() => import("./components/sections/Contact/Contact"));
 const NotFound = lazy(() => import("./components/sections/NotFound/NotFound"));
 
-// Fallback for Suspense
+// Fallback for Suspense (invisible para evitar parpadeos)
 const SectionLoader = () => (
-  <div className="section-loader" style={{ height: "400px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-    <div className="loader-dots">
-      <span>.</span><span>.</span><span>.</span>
-    </div>
-  </div>
+  <div className="section-loader" style={{ height: "200px" }}></div>
 );
 
 // Smooth Scroll Logic Wrapper
@@ -182,6 +178,15 @@ function AppContent() {
 }
 
 function App() {
+  useEffect(() => {
+    // Desactivar la restauración automática del scroll del navegador
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    // Forzar el scroll al inicio al cargar/recargar
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Router>
       <AppContent />

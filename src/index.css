@@ -87,12 +87,10 @@ body {
   background-color: var(--bg-color);
   background-image:
     radial-gradient(circle at 15% 50%, var(--neutral-200) 0%, transparent 50%),
-    radial-gradient(circle at 85% 30%, var(--neutral-300) 0%, transparent 50%),
-    radial-gradient(var(--neutral-300) 1px, transparent 1px);
+    radial-gradient(circle at 85% 30%, var(--neutral-300) 0%, transparent 50%);
   background-size:
     100% 100%,
-    100% 100%,
-    24px 24px;
+    100% 100%;
   background-attachment: fixed;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -114,8 +112,7 @@ body {
       circle at 85% 30%,
       rgba(63, 63, 70, 0.2) 0%,
       transparent 50%
-    ),
-    radial-gradient(rgba(39, 39, 42, 0.5) 1px, transparent 1px);
+    );
 }
 
 h1,

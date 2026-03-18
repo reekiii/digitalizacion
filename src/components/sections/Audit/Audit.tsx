@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { MessageCircle, Video, Calendar } from "lucide-react";
+import { MessageCircle, Video } from "lucide-react";
 import { useIsDarkMode } from "../../../lib/useIsDarkMode";
 import Particles from "../../ui/Particles/Particles";
 import TiltCard from "../../ui/TiltCard";
