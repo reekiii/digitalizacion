@@ -17,26 +17,26 @@ export default function Process() {
     {
       day: "Día 1",
       icon: <Target size={24} />,
-      title: "Cuéntame tu idea",
-      desc: "Análisis de marca y definición de objetivos para tu proyecto.",
+      title: "Hablamos",
+      desc: "Me cuentas qué necesitas y qué quieres conseguir con tu web.",
     },
     {
       day: "Día 2",
       icon: <PenTool size={24} />,
       title: "Diseño",
-      desc: "Prototipado y diseño visual de alta fidelidad centrado en conversión.",
+      desc: "Te propongo un aspecto visual moderno que atraiga a tus clientes.",
     },
     {
       day: "Día 3-4",
       icon: <Code size={24} />,
-      title: "Desarrollo",
-      desc: "Implementación técnica con el máximo rendimiento y velocidad.",
+      title: "Construcción",
+      desc: "Monto tu web para que sea rápida, segura y fácil de usar.",
     },
     {
       day: "Día 5",
       icon: <Rocket size={24} />,
       title: "Lanzamiento",
-      desc: "Revisión final, optimización técnica y puesta en marcha.",
+      desc: "Revisamos todo juntos y la publicamos en internet.",
     },
   ];
 
@@ -59,15 +59,14 @@ export default function Process() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <div className="process-badge">Nuestro Proceso</div>
+            <div className="process-badge">Mi método</div>
             <h2 className="process-title">Tu web lista en tiempo récord</h2>
             <p className="process-desc">
-              Optimizamos cada fase para entregarte una web profesional en solo
+              Tengo un sistema para que tu web profesional esté funcionando en solo
               5 días.
               <br />
               <span className="indicative-note">
-                *Tiempos basados en el Pack Starter. Para proyectos Business o
-                Premium, el proceso se adapta a la complejidad.
+                *Tiempos para el Pack Starter. Si tu proyecto es más grande, nos adaptaremos.
               </span>
             </p>
           </motion.div>

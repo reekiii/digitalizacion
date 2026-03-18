@@ -9,18 +9,18 @@ import "./Services.css";
 const services = [
   {
     icon: <Layout size={32} />,
-    title: "Diseño Web",
-    desc: "Moderno y rápido. Webs que no solo son bonitas, sino que cargan en menos de 1 segundo.",
+    title: "Webs rápidas",
+    desc: "Tu página cargará al instante y se verá perfecta en cualquier móvil o tablet.",
   },
   {
     icon: <Rocket size={32} />,
-    title: "Optimización",
-    desc: "SEO + velocidad extrema. Ponemos tu web en los primeros puestos y la hacemos volar.",
+    title: "Lista para Google",
+    desc: "Monto tu web siguiendo las recomendaciones de Google para que sea más fácil encontrarte.",
   },
   {
     icon: <RefreshCw size={32} />,
-    title: "Rediseño",
-    desc: "Transformación de webs antiguas. Convertimos esa web del 2010 en una herramienta de ventas actual.",
+    title: "Renovación",
+    desc: "Si tu web actual se ve antigua, le doy un aspecto moderno para que vuelvas a atraer visitas.",
   },
 ];
 
@@ -51,10 +51,9 @@ export default function Services() {
           transition={{ duration: 0.6 }}
         >
           <div className="pricing-badge">Servicios</div>
-          <h2 className="section-title tracking-tight">Lo que hacemos en GrasDesign</h2>
+          <h2 className="section-title tracking-tight">Cómo te ayudo en GrasDesign</h2>
           <p className="services-subtitle">
-            Soluciones digitales de alto impacto para negocios que buscan el
-            siguiente nivel.
+            Me encargo de todo lo que tu negocio necesita para brillar en internet.
           </p>
         </motion.div>
 

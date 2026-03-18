@@ -21,21 +21,14 @@ export default function Audit() {
       title: "WhatsApp",
       desc: "Rápido y directo. Pásame tu idea o tu web actual y te respondo por chat.",
       action: "Hablar por WhatsApp",
-      link: "#",
+      link: "https://wa.me/34657828903",
     },
     {
       icon: <Video size={32} />,
-      title: "Vídeo-Análisis (Loom)",
-      desc: "Recibe un vídeo de 5 min analizando tu competencia y puntos de mejora.",
+      title: "Vídeo de análisis",
+      desc: "Te grabo un vídeo explicándote qué cambiaría de tu web y qué hace tu competencia.",
       action: "Solicitar vídeo",
-      link: "#",
-    },
-    {
-      icon: <Calendar size={32} />,
-      title: "Llamada / Meet",
-      desc: "Agenda 15 minutos conmigo para una asesoría personalizada.",
-      action: "Agendar llamada",
-      link: "#",
+      link: "#contacto",
     },
   ];
 
@@ -57,13 +50,12 @@ export default function Audit() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <div className="audit-badge">Auditoría Express</div>
+          <div className="audit-badge">Análisis gratuito</div>
           <h2 className="audit-title tracking-tight">
-            Tu transformación empieza con una Auditoría Express (100% Gratis)
+            Descubre qué falla en tu web actual (100% Gratis)
           </h2>
           <p className="audit-subtitle">
-            Analizamos tu presencia digital y te damos la hoja de ruta para
-            atraer más clientes. Elige el canal que prefieras:
+            Reviso tu web y te digo cómo mejorarla para atraer más clientes. Elige cómo prefieres que hablemos:
           </p>
         </motion.div>
 

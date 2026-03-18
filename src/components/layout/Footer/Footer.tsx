@@ -12,26 +12,26 @@ export default function Footer() {
   const privacyContent = (
     <>
       <p>
-        En <strong>GrasDesign</strong>, valoramos su privacidad y estamos
-        plenamente comprometidos con la protección de sus datos personales, en
+        En <strong>GrasDesign</strong>, valoro tu privacidad y estoy
+        plenamente comprometido con la protección de tus datos personales, en
         estricto cumplimiento con el Reglamento General de Protección de Datos (RGPD)
         y la normativa aplicable en vigor.
       </p>
       <h3>1. Recopilación y Uso de Datos</h3>
       <p>
-        Únicamente recopilamos la información estrictamente necesaria
-        (nombre, correo electrónico y detalles del proyecto) que usted nos
-        proporciona voluntariamente a través de nuestros formularios de contacto,
-        con el fin exclusivo de gestionar su solicitud y ofrecerle nuestros
+        Únicamente recopilo la información estrictamente necesaria
+        (nombre, correo electrónico y detalles del proyecto) que tú me
+        proporcionas voluntariamente a través de mis formularios de contacto,
+        con el fin exclusivo de gestionar tu solicitud y ofrecerte mis
         servicios de diseño y desarrollo web.
       </p>
       <h3>2. Protección y Derechos</h3>
       <p>
-        Sus datos son tratados con la máxima confidencialidad y alojados en
-        servidores seguros. No compartimos, vendemos ni cedemos sus datos a
-        terceros, salvo obligación legal. Usted tiene derecho a acceder,
-        rectificar, cancelar u oponerse al tratamiento de sus datos en cualquier
-        momento, enviándonos una solicitud por correo electrónico.
+        Tus datos son tratados con la máxima confidencialidad y alojados en
+        servidores seguros. No comparto, vendo ni cedo tus datos a
+        terceros, salvo obligación legal. Tienes derecho a acceder,
+        rectificar, cancelar u oponerse al tratamiento de tus datos en cualquier
+        momento, enviándome una solicitud por correo electrónico.
       </p>
     </>
   );
@@ -39,13 +39,13 @@ export default function Footer() {
   const termsContent = (
     <>
       <p>
-        Bienvenido a <strong>GrasDesign</strong>. Al acceder y utilizar nuestro
-        sitio web y contratar nuestros servicios, usted acepta quedar vinculado a
+        Bienvenido a <strong>GrasDesign</strong>. Al acceder y utilizar mi
+        sitio web y contratar mis servicios, aceptas quedar vinculado a
         los siguientes Términos de Servicio.
       </p>
       <h3>1. Prestación de Servicios</h3>
       <p>
-        Nos especializamos en el diseño web de alto rendimiento y marketing digital.
+        Me especializo en el diseño web profesional.
         Toda propuesta final, alcance técnico del proyecto y condiciones de pago
         serán detalladas y acordadas previamente de forma formal antes de iniciar.
       </p>
@@ -58,10 +58,10 @@ export default function Footer() {
       </p>
       <h3>3. Limitación de Responsabilidad</h3>
       <p>
-        Nos esforzamos por ofrecer un servicio de excelencia, ininterrumpido y libre
-        de errores; sin embargo, no garantizamos la disponibilidad continua del
-        sitio. No seremos responsables de daños indirectos derivados del uso de
-        nuestra plataforma.
+        Me esfuerzo por ofrecer un servicio de excelencia, ininterrumpido y libre
+        de errores; sin embargo, no garantizo la disponibilidad continua del
+        sitio. No seré responsable de daños indirectos derivados del uso de
+        mi plataforma.
       </p>
     </>
   );
@@ -70,29 +70,29 @@ export default function Footer() {
     <>
       <p>
         Esta Política de Cookies explica cómo <strong>GrasDesign</strong> utiliza
-        cookies y tecnologías similares para reconocerle cuando visita nuestro
-        sitio web, con el objetivo de optimizar su experiencia de navegación.
+        cookies y tecnologías similares para reconocerte cuando visitas mi
+        sitio web, con el objetivo de optimizar tu experiencia de navegación.
       </p>
       <h3>1. ¿Qué son las cookies?</h3>
       <p>
-        Las cookies son pequeños archivos de datos que se descargan en su
-        dispositivo al acceder a nuestra web. Permiten a la página recordar sus
+        Las cookies son pequeños archivos de datos que se descargan en tu
+        dispositivo al acceder a mi web. Permiten a la página recordar tus
         acciones y preferencias durante un tiempo determinado.
       </p>
-      <h3>2. Tipos de Cookies que Utilizamos</h3>
+      <h3>2. Tipos de Cookies que Utilizo</h3>
       <p>
         <strong>Cookies Técnicas:</strong> Fundamentales para el correcto
         funcionamiento del sitio, la navegación segura y la visualización del
         contenido de forma óptima. Son estrictamente necesarias.<br/><br/>
-        <strong>Cookies Analíticas:</strong> Nos ayudan a comprender cómo los
+        <strong>Cookies Analíticas:</strong> Me ayudan a comprender cómo los
         visitantes interactúan con la web, recopilando métricas y estadísticas
         de forma anónima para identificar áreas de mejora.
       </p>
       <h3>3. Gestión y Revocación</h3>
       <p>
-        Usted puede aceptar, rechazar o configurar las cookies no esenciales a
-        través de nuestro banner de consentimiento inicial. Asimismo, puede
-        gestionar las cookies directamente desde los ajustes de seguridad de su
+        Puedes aceptar, rechazar o configurar las cookies no esenciales a
+        través de mi banner de consentimiento inicial. Asimismo, puedes
+        gestionar las cookies directamente desde los ajustes de seguridad de tu
         propio navegador web en cualquier momento.
       </p>
     </>
@@ -105,15 +105,15 @@ export default function Footer() {
           <div className="footer-brand">
             <h3>GrasDesign</h3>
             <p>
-              Agencia de marketing digital y diseño web de alto rendimiento.
+              Diseño y desarrollo web profesional para que tu negocio crezca en internet.
             </p>
           </div>
 
           <nav className="footer-nav">
             <p className="footer-nav-title">Navegación</p>
             <a href="#servicios">Servicios</a>
-            <a href="#packs">Packs & Precios</a>
-            <a href="#proceso">Proceso</a>
+            <a href="#packs">Planes y Precios</a>
+            <a href="#process">Mi Método</a>
             <a href="#faq">FAQ</a>
             <a href="#contacto">Contacto</a>
           </nav>

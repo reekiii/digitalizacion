@@ -7,48 +7,48 @@ import "./FAQ.css";
 
 const faqs = [
   {
-    q: "¿Cuánto tiempo tarda el desarrollo?",
-    a: "Para el Pack Starter, el tiempo de entrega es de solo 5 días hábiles tras la auditoría inicial. Proyectos más complejos como el Pack Business se entregan en 10 días.",
+    q: "¿Cuánto tiempo tardas en hacer la web?",
+    a: "Para el Pack Starter, la tengo lista en solo 5 días hábiles desde que empezamos. Si tu proyecto es más grande, como el Pack Business, tardaré unos 10 días.",
   },
   {
-    q: "¿Soy el dueño legal de mi página y mi código?",
-    a: "Totalmente. En GrasDesign configuramos las cuentas de GitHub y Vercel bajo tu propio nombre. El código es un activo de tu empresa y tú tienes las llaves de acceso desde el primer día.",
+    q: "¿Soy el dueño legal de mi página?",
+    a: "Totalmente. Todo se configura a tu nombre. El código es tuyo y tú tienes todas las llaves de acceso desde el primer momento. Yo solo te ayudo a montarlo.",
   },
   {
-    q: "¿Necesito conocimientos técnicos para mantener la web?",
-    a: "Para nada. Nuestro objetivo es que te centres en tu negocio. Ofrecemos mantenimiento opcional para que tu web esté siempre actualizada, segura y con los cambios que necesites.",
+    q: "¿Necesito saber de informática para mantener la web?",
+    a: "Para nada. Mi objetivo es que tú te centres en tu negocio. Si quieres, yo me encargo de que esté siempre actualizada y segura por ti.",
   },
   {
-    q: "¿La web estará optimizada para captar clientes?",
-    a: "Sí. Aplicamos el estándar de 'Salty Soul Trips': rendimiento extremo con menos de 1 segundo de carga, 100% de SEO técnico y una puntuación de 99 en PageSpeed.",
+    q: "¿La web me servirá para captar clientes?",
+    a: "Sí. Diseño cada página para que sea muy rápida y fácil de usar, lo que ayuda a que tus visitas se conviertan en clientes reales.",
   },
   {
-    q: "¿Cómo gestionamos el hosting y el dominio?",
-    a: "Te guío paso a paso para contratar el dominio y hosting a tu nombre. Esto garantiza que nadie pueda 'secuestrar' tu web y que tengas el control total de tus facturas.",
+    q: "¿Cómo se paga el hosting y el dominio?",
+    a: "Te ayudo paso a paso a contratarlos a tu nombre. Así tú tienes el control total de tus facturas y de tu propiedad en internet.",
   },
   {
-    q: "¿Cómo se realiza el pago de los servicios?",
-    a: "Para comenzar el proyecto se abona el 50% del presupuesto tras la auditoría inicial. El 50% restante se paga el Día 5, una vez que la web está terminada y lista para ser lanzada.",
+    q: "¿Cómo se realiza el pago?",
+    a: "Se paga el 50% al empezar y el otro 50% cuando la web esté terminada y estés conforme con el resultado.",
   },
   {
-    q: "¿Por qué usáis esta tecnología y no WordPress?",
-    a: "En GrasDesign utilizamos tecnologías modernas (Next.js y Vercel) porque son infinitamente más rápidas y seguras. Esto nos permite alcanzar rendimientos extremos como el de Salty Soul Trips, con cargas en menos de 1 segundo y 99 de PageSpeed, algo muy difícil de lograr con herramientas tradicionales.",
+    q: "¿Por qué no usas WordPress?",
+    a: "Uso herramientas más modernas porque hacen que tu web sea mucho más rápida y segura. Una web rápida gusta más a los clientes y a Google.",
   },
   {
     q: "¿Qué sucede si necesito hacer cambios en el futuro?",
-    a: "Tu web es totalmente escalable. Si tu negocio crece, podemos pasar del Pack Starter al Business o incluso al Premium en cualquier momento. Estamos aquí para acompañar tu crecimiento.",
+    a: "Tu web puede crecer conmigo. Podemos añadir secciones o nuevas funciones en cualquier momento según lo vaya necesitando tu negocio.",
   },
   {
-    q: "¿Quién se encarga de las fotos y los textos?",
-    a: "Durante el proceso de diseño definimos la estructura y los textos. Tú proporcionas la información clave de tu negocio y nosotros la optimizamos mediante 'copywriting' estratégico para que convenza a tus visitas.",
+    q: "¿Quién escribe los textos y pone las fotos?",
+    a: "Tú me das la información básica de tu negocio y yo me encargo de darle forma para que sea atractiva y profesional para tus visitas.",
   },
   {
-    q: "¿Qué pasa si ya tengo un dominio comprado?",
-    a: "No hay problema. Simplemente lo vincularemos a tu nueva infraestructura en Vercel. Te guiaremos para hacer una pequeña configuración técnica que tardaremos menos de 5 minutos en completar.",
+    q: "¿Qué pasa si ya tengo un nombre de dominio?",
+    a: "No hay problema. Lo conectamos a tu nueva web en un momento. Yo me encargo de que todo funcione correctamente.",
   },
   {
-    q: "¿Ofrecéis algún tipo de garantía?",
-    a: "Nuestra garantía es nuestro método de trabajo: hasta que no estés conforme con el resultado final en la revisión previa al lanzamiento, no realizamos el despliegue definitivo. Tu éxito es nuestra prioridad.",
+    q: "¿Tienes algún tipo de garantía?",
+    a: "Mi garantía es que no publicamos nada hasta que tú no estés totalmente contento con cómo ha quedado la web. Tu satisfacción es lo primero.",
   },
 ];
 

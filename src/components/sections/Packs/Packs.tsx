@@ -9,12 +9,12 @@ const plans = [
     name: "Starter",
     price: "300",
     isTextPrice: false,
-    description: "Presencia digital profesional de una página.",
+    description: "Ideal para empezar con una página de presentación clara.",
     features: [
-      "1 Página (Landing Page)",
-      "100% Mobile Responsive",
-      "Optimización básica",
-      "Entrega en 5 días",
+      "1 Página (Landing)",
+      "Se ve perfecto en el móvil",
+      "Rápida y segura",
+      "Lista en 5 días",
     ],
     buttonText: "Elegir Starter",
     highlighted: false,
@@ -23,12 +23,12 @@ const plans = [
     name: "Business",
     price: "600",
     isTextPrice: false,
-    description: "La solución completa para tu negocio.",
+    description: "La opción más completa con varias secciones para tu negocio.",
     features: [
       "Hasta 4 Páginas",
-      "SEO Básico",
-      "Optimización de velocidad",
-      "Entrega en 10 días",
+      "Preparada para Google",
+      "Web ultrarrápida",
+      "Puesta a punto Google Maps",
     ],
     buttonText: "Elegir Business",
     highlighted: true,
@@ -37,12 +37,12 @@ const plans = [
     name: "Premium",
     price: "900",
     isTextPrice: false,
-    description: "Máxima potencia y escalabilidad.",
+    description: "Si necesitas una web más grande y con funciones especiales.",
     features: [
       "Hasta 7 Páginas",
-      "SEO Optimizado",
-      "Animaciones Avanzadas",
-      "Soporte Premium",
+      "Mejor posición en Google",
+      "Diseño dinámico",
+      "Gestión de Google Maps",
     ],
     buttonText: "Elegir Premium",
     highlighted: false,
@@ -126,10 +126,10 @@ export default function Packs() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
         >
-          <div className="pricing-badge">Planes</div>
-          <h2 className="section-title">Packs de Diseño Web</h2>
+          <div className="pricing-badge">Oferta de Lanzamiento</div>
+          <h2 className="section-title">Planes y Precios</h2>
           <p className="packs-subtitle">
-            Escalabilidad y rendimiento adaptados a tus necesidades.
+            Aprovecha estos precios especiales para los primeros proyectos de este año.
           </p>
         </motion.div>
 
@@ -150,8 +150,8 @@ export default function Packs() {
         >
           <ShieldCheck size={24} className="maintenance-icon" />
           <p>
-            <strong>Mantenimiento proactivo por solo 20€/mes:</strong>{" "}
-            Seguridad, actualizaciones y soporte técnico incluidos.
+            <strong>Mantenimiento + Google Maps por 40€/mes:</strong>{" "}
+            Seguridad, actualizaciones y gestión de tu ficha de Google Maps incluidos.
           </p>
         </motion.div>
       </div>

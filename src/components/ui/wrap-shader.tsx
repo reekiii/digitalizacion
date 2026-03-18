@@ -53,12 +53,11 @@ export default function WarpShaderHero() {
         <div className="warp-shader-container">
           <img src="/assets/icon.webp" alt="Logo" />
           <h1 className="warp-shader-title font-heading font-light tracking-tighter">
-            <b>Diseño webs</b> que convierten visitas en clientes
+            <b>Pongo tu negocio en el mapa</b>
           </h1>
 
           <p className="warp-shader-desc">
-            Agencia de diseño web y tecnología de alto impacto. Creamos
-            experiencias digitales que potencian tu negocio.
+            Diseño tu web y pongo a punto tu Google Maps. Sin líos técnicos, directo al grano.
           </p>
 
           <div className="warp-shader-actions">

@@ -41,7 +41,7 @@ export default function Navbar() {
             Inicio
           </a>
           <a href="#audit" onClick={() => setMobileMenuOpen(false)}>
-            Auditoría
+            Análisis Gratis
           </a>
           <a href="#sobre-mi" onClick={() => setMobileMenuOpen(false)}>
             Sobre Mí
@@ -49,11 +49,11 @@ export default function Navbar() {
           <a href="#servicios" onClick={() => setMobileMenuOpen(false)}>
             Servicios
           </a>
-          <a href="#tecnologia" onClick={() => setMobileMenuOpen(false)}>
-            Tecnología
+          <a href="#process" onClick={() => setMobileMenuOpen(false)}>
+            Mi Método
           </a>
           <a href="#packs" onClick={() => setMobileMenuOpen(false)}>
-            Packs
+            Planes
           </a>
           <a href="#faq" onClick={() => setMobileMenuOpen(false)}>
             FAQ

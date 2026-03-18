@@ -40,38 +40,36 @@ export default function CookieConsent() {
   const cookiesContent = (
     <>
       <p>
-        Este sitio web utiliza cookies para mejorar su experiencia mientras
-        navega por el sitio web.
+        Este sitio web utiliza cookies para mejorar tu experiencia mientras
+        navegas.
       </p>
       <h3>1. ¿Qué son las cookies?</h3>
       <p>
-        Las cookies son pequeños archivos de texto que se utilizan para
-        almacenar pequeñas piezas de información. Se almacenan en su dispositivo
-        cuando el sitio web se carga en su navegador y nos ayudan a que el sitio
-        web funcione correctamente, sea más seguro y proporcione una mejor
-        experiencia de usuario.
+        Las cookies son pequeños archivos de texto que se guardan en tu dispositivo
+        cuando entras en una web. Me ayudan a que el sitio
+        funcione correctamente, sea más seguro y te ofrezca una mejor
+        experiencia.
       </p>
-      <h3>2. Cómo usamos las cookies</h3>
+      <h3>2. Cómo uso las cookies</h3>
       <p>
-        Utilizamos cookies esenciales para el funcionamiento básico del sitio y
-        cookies analíticas (si las acepta) para entender cómo interactúa con
-        nuestro sitio, lo que nos ayuda a mejorar nuestros servicios y detectar
-        posibles errores técnicos.
+        Utilizo cookies esenciales para que la web funcione y
+        cookies analíticas (si las aceptas) para entender cómo usas
+        mi sitio, lo que me ayuda a mejorar mis servicios y detectar
+        posibles fallos técnicos.
       </p>
-      <h3>3. Tipos de cookies que usamos</h3>
+      <h3>3. Tipos de cookies que uso</h3>
       <p>
-        <strong>Necesarias:</strong> Esenciales para navegar y usar las
-        funciones del sitio. Sin ellas, el sitio no funcionaría correctamente.
+        <strong>Necesarias:</strong> Son imprescindibles para navegar y usar las
+        funciones de la web. Sin ellas, el sitio no funcionaría bien.
       </p>
       <p>
-        <strong>Analíticas:</strong> Nos permiten contar las visitas y fuentes
-        de tráfico para medir y mejorar el rendimiento de nuestro sitio.
+        <strong>Analíticas:</strong> Me permiten saber cuántas visitas recibo
+        para medir y mejorar el rendimiento de mi sitio.
       </p>
       <h3>4. Gestionar cookies</h3>
       <p>
-        Puede cambiar sus preferencias de cookies en cualquier momento ajustando
-        la configuración en este mismo banner o a través de la configuración de
-        su navegador.
+        Puedes cambiar tus preferencias en cualquier momento ajustando
+        la configuración en este mismo banner o desde tu navegador.
       </p>
     </>
   );

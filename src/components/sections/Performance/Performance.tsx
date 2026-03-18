@@ -7,8 +7,8 @@ import './Performance.css';
 export default function Performance() {
     const metrics = [
         { icon: <Zap size={24} />, value: <NumberTicker value={1} prefix="< " suffix="s" delay={0.2} />, label: 'Carga inicial' },
-        { icon: <BarChart size={24} />, value: <NumberTicker value={100} suffix="%" delay={0.4} />, label: 'SEO Técnico' },
-        { icon: <CheckCircle2 size={24} />, value: <NumberTicker value={99} delay={0.6} />, label: 'PageSpeed' },
+        { icon: <BarChart size={24} />, value: <NumberTicker value={100} suffix="%" delay={0.4} />, label: 'Estructura para Google' },
+        { icon: <CheckCircle2 size={24} />, value: <NumberTicker value={99} delay={0.6} />, label: 'Puntuación técnica' },
     ];
 
     return (
@@ -22,11 +22,10 @@ export default function Performance() {
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6 }}
                     >
-                        <div className="perf-badge">Caso de Éxito</div>
-                        <h2 className="perf-title">Rendimiento extremo para Salty Soul Trips</h2>
+                        <div className="perf-badge">Caso de éxito: Salty Soul Trips</div>
+                        <h2 className="perf-title">Tu web será ultrarrápida</h2>
                         <p className="perf-desc">
-                            Velocidad, precisión y un código impecable. La tecnología no solo debe verse bien,
-                            debe funcionar a la perfección en cualquier condición.
+                            Como hice con Salty Soul Trips, optimizo tu web al máximo. Una página que vuela no solo da confianza, sino que facilita mucho que tus clientes y Google te encuentren.
                         </p>
                         <a
                             href="https://www.saltysoultrips.com/"

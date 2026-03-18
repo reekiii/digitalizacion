@@ -56,8 +56,8 @@ export default function Contact() {
                     >
                         <h2 className="section-title">Hablemos de tu proyecto.</h2>
                         <p className="contact-desc">
-                            Si buscas una web rápida, escalable y con un diseño impecable, envíame un mensaje.
-                            Responderé en menos de 24 horas para agendar una breve videollamada.
+                            Si quieres que empecemos a trabajar en tu nueva web, escríbeme.
+                            Te responderé lo antes posible para que hablemos de tu idea.
                         </p>
 
                         <div className="contact-details">
@@ -176,7 +176,7 @@ export default function Contact() {
                             </button>
                             
                             {status === 'success' && (
-                                <p className="status-msg success">¡Gracias! Te contactaremos pronto.</p>
+                                <p className="status-msg success">¡Gracias! Te responderé muy pronto.</p>
                             )}
                             {status === 'error' && (
                                 <p className="status-msg error">Hubo un problema. Inténtalo de nuevo.</p>
