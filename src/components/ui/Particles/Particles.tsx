@@ -9,13 +9,15 @@ interface MousePosition {
   y: number;
 }
 
-function useMousePosition(): MousePosition {
+function useMousePosition(active: boolean): MousePosition {
   const [mousePosition, setMousePosition] = useState<MousePosition>({
     x: 0,
     y: 0,
   });
 
   useEffect(() => {
+    if (!active) return;
+
     const handleMouseMove = (event: MouseEvent) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
@@ -25,7 +27,7 @@ function useMousePosition(): MousePosition {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [active]);
 
   return mousePosition;
 }
@@ -80,10 +82,10 @@ export default function Particles({
 }: ParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(canvasContainerRef, { margin: "200px" });
+  const isInView = useInView(canvasContainerRef, { margin: "100px" });
   const context = useRef<CanvasRenderingContext2D | null>(null);
   const circles = useRef<Circle[]>([]);
-  const mousePosition = useMousePosition();
+  const mousePosition = useMousePosition(isInView);
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;

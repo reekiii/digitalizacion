@@ -130,14 +130,32 @@ function HomePage() {
       <Hero />
       <Suspense fallback={<SectionLoader />}>
         <Performance />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
         <Audit />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
         <AboutMe />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
         <Services />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
         <Sponsors />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
         <Packs />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
         <Process />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
         <Testimonials />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
         <FAQ />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
         <Contact />
       </Suspense>
     </motion.div>
