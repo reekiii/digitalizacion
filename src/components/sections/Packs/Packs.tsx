@@ -6,45 +6,61 @@ import "./Packs.css";
 
 const plans = [
   {
-    name: "Starter",
-    price: "300",
+    name: "Express",
+    time: "Lista en 5 días",
+    price: "350",
     isTextPrice: false,
-    description: "Ideal para empezar con una página de presentación clara.",
+    description:
+      "Para quien necesita una web profesional ya. Sin esperas, sin complicaciones. Tu negocio online esta semana.",
     features: [
-      "1 Página (Landing)",
-      "Se ve perfecto en el móvil",
-      "Rápida y segura",
-      "Lista en 5 días",
+      "1 página completa con hero, servicios, sobre ti y contacto",
+      "Diseño a medida según tu imagen de marca",
+      "100% responsive: móvil, tablet y escritorio",
+      "Velocidad de carga optimizada",
+      "Formulario de contacto + botón WhatsApp",
+      "Aviso legal y política de privacidad (RGPD)",
     ],
-    buttonText: "Elegir Starter",
+    buttonText: "Empezar ya",
     highlighted: false,
   },
   {
     name: "Business",
-    price: "600",
+    subtitle: "Web de negocio",
+    time: "Lista en 10 días",
+    price: "650",
     isTextPrice: false,
-    description: "La opción más completa con varias secciones para tu negocio.",
+    description:
+      "Una web completa que presenta tu negocio con claridad, genera confianza y convierte visitas en contactos.",
     features: [
-      "Hasta 4 Páginas",
-      "Preparada para Google",
-      "Web ultrarrápida",
-      "Puesta a punto Google Maps",
+      "Hasta 4 páginas: inicio, servicios, sobre mí, contacto",
+      "Diseño personalizado + coherencia de marca",
+      "Web ultrarrápida (Core Web Vitals optimizados)",
+      "Google Maps integrado y ficha de empresa configurada",
+      "Formularios, WhatsApp y enlaces a redes sociales",
+      "Página visible en Google (indexada y con metadatos)",
+      "RGPD completo + certificado SSL",
     ],
     buttonText: "Elegir Business",
     highlighted: true,
   },
   {
     name: "Premium",
-    price: "900",
+    subtitle: "Web completa",
+    time: "Lista en 15–18 días",
+    price: "950",
     isTextPrice: false,
-    description: "Si necesitas una web más grande y con funciones especiales.",
+    description:
+      "Para negocios que quieren una web sólida, con más páginas, funcionalidades avanzadas y rendimiento técnico de nivel alto.",
     features: [
-      "Hasta 7 Páginas",
-      "Mejor posición en Google",
-      "Diseño dinámico",
-      "Gestión de Google Maps",
+      "Hasta 7 páginas con estructura clara y escalable",
+      "Diseño avanzado con animaciones y microinteracciones",
+      "Máxima velocidad: 95+ en PageSpeed",
+      "Formulario de reservas o presupuesto automático",
+      "Google Maps + galería de proyectos o portfolio",
+      "Página visible en Google con metadatos avanzados",
+      "30 días de soporte post-entrega incluidos",
     ],
-    buttonText: "Elegir Premium",
+    buttonText: "Consultar Premium",
     highlighted: false,
   },
 ];
@@ -85,13 +101,20 @@ function MagicCard({ plan, index }: { plan: any; index: number }) {
         />
       )}
 
-      {plan.highlighted && <div className="pack-badge">Más elegido</div>}
+      {plan.highlighted && <div className="pack-badge">⭐ Más elegido</div>}
 
-      <h3 className="pack-name">{plan.name}</h3>
+      <div className="pack-header-info">
+        <span className="pack-time">{plan.time}</span>
+        <h3 className="pack-name">{plan.name}</h3>
+        {plan.subtitle && <span className="pack-subtitle-tag">{plan.subtitle}</span>}
+      </div>
 
       <div className={`pack-price ${plan.isTextPrice ? "text-price" : ""}`}>
-        {!plan.isTextPrice && <span className="currency">€</span>}
-        <span className="amount">{plan.price}</span>
+        <div className="price-main">
+          {!plan.isTextPrice && <span className="currency">€</span>}
+          <span className="amount">{plan.price}</span>
+        </div>
+        <span className="iva-tag">+ IVA</span>
       </div>
 
       <p className="pack-desc">{plan.description}</p>

@@ -8,7 +8,7 @@ import "./FAQ.css";
 const faqs = [
   {
     q: "¿Cuánto tiempo tardas en hacer la web?",
-    a: "Para el Pack Starter, la tengo lista en solo 5 días hábiles desde que empezamos. Si tu proyecto es más grande, como el Pack Business, tardaré unos 10 días.",
+    a: "Para el Pack Express, la tengo lista en solo 5 días hábiles desde que empezamos. Si tu proyecto es más grande, como el Pack Business, tardaré unos 10 días.",
   },
   {
     q: "¿Soy el dueño legal de mi página?",
